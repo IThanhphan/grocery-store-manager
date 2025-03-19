@@ -1,24 +1,26 @@
-import { useState } from "react";
 import "./navbar.css";
+import Overview from "./overview/Overview";
+import Product from "./product/Product";
+import Transaction from "./transaction/Transaction";
+import Partner from "./partner/Partner";
+import Employee from "./employee/Employee";
+import CashBook from "./cashBook/CashBook";
 
 const Navbar = () => {
-  const [tools] = useState([
-    { icon: "fa-eye", label: "Tổng quan" },
-    { icon: "fa-box", label: "Hàng hóa" },
-    { icon: "fa-cart-shopping", label: "Giao dịch" },
-    { icon: "fa-user-tie", label: "Đối tác" },
-    { icon: "fa-user-group", label: "Nhân viên" },
-    { icon: "fa-hand-holding-dollar", label: "Sổ quỹ" },
-  ]);
-
   return (
-    <div className="navbar">
-      {tools.map((tool, index) => (
-        <div className="box_tool" key={index}>
-          <i className={`fa-solid ${tool.icon}`}></i>
-          <p>{tool.label}</p>
-        </div>
-      ))}
+    <div className="toolbar_67">
+      {/* Mục Tổng quan */}
+      <Overview></Overview>
+      {/* Mục Hàng hóa */}
+      <Product></Product>
+      {/* Mục Giao dịch */}
+      <Transaction></Transaction>
+      {/* Mục Đối tác */}
+      <Partner></Partner>
+      {/* Mục Nhân viên */}
+      <Employee></Employee>
+      {/* Mục Sổ quỹ */}
+      <CashBook></CashBook>
     </div>
   );
 };

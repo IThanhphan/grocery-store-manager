@@ -1,37 +1,43 @@
-.header{
+.header_67 {
   width: 100%;
   height: cover;
   display: flex;
   justify-content: space-between;
   padding: 5px 20px;
 }
-.header img{
+
+.header_67 img {
   width: 10%;
 }
-.header img:nth-child(2){
+
+.header_67 img:nth-child(2) {
   width: 25%;
 }
-.right{
+
+.right_67 {
   display: flex;
   gap: 10px;
   padding-right: 20px;
   align-items: center;
 }
-.box{
+
+.box_67 {
   display: flex;
   height: 30px;
   gap: 10px;
   align-items: center;
   position: relative;
-  padding:10px;
+  padding: 10px;
   border-radius: 5px;
   transition: background 0.3s ease-out, transform 0.2s ease-out;
 }
-.box:hover{
+
+.box:hover_67 {
   background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.menu{
+
+.menu_67 {
   display: none;
   background-color: #fff;
   padding: 10px 0;
@@ -43,7 +49,9 @@
   border-radius: 5px;
   z-index: 100;
 }
-.menu li, .menu_user li{
+
+.menu_67 li,
+.menu_user_67 li {
   list-style: none;
   padding: 10px 20px;
   display: flex;
@@ -52,17 +60,22 @@
   cursor: pointer;
   transition: background 0.3s ease-out, transform 0.2s ease-out;
 }
-.menu li a, .menu_user li a{
+
+.menu_67 li a,
+.menu_user_67 li a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
-.box:hover .menu{
+
+.box_67:hover .menu_67 {
   display: block;
 }
-.menu li:hover{
+
+.menu_67 li:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-.menu_user{
+
+.menu_user_67 {
   display: none;
   background-color: #fff;
   padding: 10px 0;
@@ -74,12 +87,15 @@
   border-radius: 5px;
   z-index: 100;
 }
-.box:hover .menu_user{
+
+.box_67:hover .menu_user_67 {
   display: block;
 }
-.menu_user li{
+
+.menu_user_67 li {
   transition: background 0.3s ease-out, transform 0.2s ease-out;
 }
-.menu_user li:hover{
+
+.menu_user_67 li:hover {
   background: rgba(0, 0, 0, 0.1);
 }
