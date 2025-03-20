@@ -10,3 +10,7 @@ body{
   font-size: 14px;
   line-height: 18px;
 }
+
+.link-no-underline {
+  text-decoration: none;
+}

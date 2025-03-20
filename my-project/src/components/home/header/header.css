@@ -32,7 +32,7 @@
   transition: background 0.3s ease-out, transform 0.2s ease-out;
 }
 
-.box:hover_67 {
+.box_67:hover {
   background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }

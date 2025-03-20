@@ -1,6 +1,6 @@
 import "./header.css";
-import logo1 from "../../assets/imgs/logo1.png";
-import logo2 from "../../assets/imgs/logo2.png";
+import logo1 from "../../../assets/imgs/logo1.png"
+import logo2 from "../../../assets/imgs/logo2.png"
 import BoxAccount from "./boxAccount/BoxAccount";
 
 const Header = () => {
