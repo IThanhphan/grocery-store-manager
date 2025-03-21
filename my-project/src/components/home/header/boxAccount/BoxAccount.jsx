@@ -1,10 +1,29 @@
-import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { logoutUser } from "../../../../callAPI/authAPI";
 
 const BoxAccount = () => {
+  const userLogin = useSelector((state) => state.user?.currentUser);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    logoutUser(userLogin?.accessToken, dispatch, navigate);
+  }
+
+  useEffect(() => {
+    if (!userLogin) {
+      navigate("/login");
+    }
+  });
   return (
     <div className="box_67">
       <p>
-        <b>0963670363</b>
+        <b>
+          {userLogin?.username} ({!userLogin?.manager ? "Nhân viên" : "Quản lý"}
+          )
+        </b>
       </p>
       <i className="fa-solid fa-circle-user"></i>
       <ul className="menu_user_67">
@@ -12,12 +31,10 @@ const BoxAccount = () => {
           <i className="fa-solid fa-address-card"></i>
           <a href="/">Tài khoản</a>
         </li>
-        <Link to="/login" className="link-no-underline">
-          <li className="box_67">
-            <i className="fa-solid fa-arrow-up-from-bracket fa-rotate-90"></i>
-            <a href="/">Đăng xuất</a>
-          </li>
-        </Link>
+        <li className="box_67" onClick={handleLogout}>
+          <i className="fa-solid fa-arrow-up-from-bracket fa-rotate-90"></i>
+          <a href="/">Đăng xuất</a>
+        </li>
       </ul>
     </div>
   );
