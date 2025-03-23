@@ -9,8 +9,8 @@ const userSlice = createSlice({
     login: (state, action) => {
       state.currentUser = action.payload;
     },
-    logout: (state, action) => {
-      state.currentUser = action.payload;
+    logout: (state) => {
+      state.currentUser = null;
     }
   }
 });
