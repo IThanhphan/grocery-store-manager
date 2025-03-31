@@ -40,7 +40,7 @@ const LoginForm = () => {
       <hr />
       <div className="them">
         <div className="check_78">
-          <input type="checkbox" id="remember" />
+          <input type="checkbox" id="remember" className="checkbox-pass"/>
           <label htmlFor="remember">Duy trì đăng nhập</label>
           <p className="check1_78">|</p>
         </div>

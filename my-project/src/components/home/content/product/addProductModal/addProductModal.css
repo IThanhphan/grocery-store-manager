@@ -1,0 +1,370 @@
+.addProduct-body-08 {
+  background-color: #f3f4f6;
+  height: 590px;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+}
+
+.container-08 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1200px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addProduct-title-08 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.tabs-08 {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.tabs-08 ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.tabs-08 li {
+  margin-right: 24px;
+}
+
+.tabs-08 a {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 500;
+  padding-bottom: 8px;
+  display: block;
+}
+
+.tabs-08 a.active {
+  color: #22c55e;
+  font-weight: 600;
+  border-bottom: 2px solid #22c55e;
+}
+
+.main-form-08 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .main-form-08 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.label-08 {
+  display: block;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.full-width-dropdown-08 {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  color: #4b5563;
+  font-size: 16px;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.product-text-input-08,
+.product-number-input-08,
+.default-view-08 select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.checkbox-group-08 input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-group-08 {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+i.fa-info-circle {
+  color: #9ca3af;
+}
+
+.custom-select-group-08 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-select-group-08 select {
+  flex-grow: 1;
+  padding-right: 80px;
+  /* Để lại không gian cho các nút */
+}
+
+.select-buttons-08 {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.select-buttons-08 button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.custom-dropdown-08 {
+  flex-grow: 1;
+  position: relative;
+}
+
+.dropdown-selected-08 {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  color: #4b5563;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-selected-08::after {
+  content: '\f078';
+  /* Font Awesome chevron-down */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-left: 8px;
+}
+
+.dropdown-options-08 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-option-08 {
+  padding: 8px;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.dropdown-option-08:hover {
+  background-color: #f3f4f6;
+}
+
+.image-gallery {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.image-placeholder {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10 90h80L70 60 50 80 30 50z" fill="gray" opacity="0.3"/></svg>') no-repeat center;
+  background-size: 50%;
+}
+
+.dropdown-group-08 {
+  margin-top: 24px;
+}
+
+.default-view-08 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-btn-08 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.detailed-view-08 {
+  margin-top: 16px;
+}
+
+.select-group-08 {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-group-08 label {
+  display: block;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.select-group-08 input {
+  width: 50%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.select-with-button-08 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.select-with-button-08 button {
+  display: flex;
+  align-items: center;
+  color: #22c55e;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.select-with-button-08 button i {
+  margin-right: 4px;
+}
+
+.action-buttons-08 {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.save-btn-08,
+.cancel-btn-08 {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.save-btn-08 {
+  background-color: #22c55e;
+}
+
+.cancel-btn-08 {
+  background-color: #6b7280;
+}
+
+.save-btn-08 i,
+.cancel-btn-08 i {
+  margin-right: 8px;
+}
+
+.modal-08 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-08 {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header-08 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header-08 h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4b5563;
+  margin: 0;
+}
+
+.modal-header-08 .close-modal-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.modal-body-08 {
+  margin-bottom: 24px;
+}
+
+.form-group-08 {
+  margin-bottom: 16px;
+}
+
+.form-group-08 label {
+  display: block;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.form-group-08 input,
+.form-group-08 select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.modal-footer-08 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}

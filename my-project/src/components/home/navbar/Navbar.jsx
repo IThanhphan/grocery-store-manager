@@ -1,26 +1,23 @@
 import "./navbar.css";
-import Overview from "./overview/Overview";
-import Product from "./product/Product";
-import Transaction from "./transaction/Transaction";
-import Partner from "./partner/Partner";
-import Employee from "./employee/Employee";
-import CashBook from "./cashBook/CashBook";
+import OverviewNav from "./overviewNav/OverviewNav";
+import ProductNav from "./productNav/ProductNav";
+import TransactionNav from "./transactionNav/TransactionNav";
+import PartnerNav from "./partnerNav/PartnerNav";
+import EmployeeNav from "./employeeNav/EmployeeNav";
 
 const Navbar = () => {
   return (
     <div className="toolbar_67">
       {/* Mục Tổng quan */}
-      <Overview></Overview>
+      <OverviewNav></OverviewNav>
       {/* Mục Hàng hóa */}
-      <Product></Product>
+      <ProductNav></ProductNav>
       {/* Mục Giao dịch */}
-      <Transaction></Transaction>
+      <TransactionNav></TransactionNav>
       {/* Mục Đối tác */}
-      <Partner></Partner>
+      <PartnerNav></PartnerNav>
       {/* Mục Nhân viên */}
-      <Employee></Employee>
-      {/* Mục Sổ quỹ */}
-      <CashBook></CashBook>
+      <EmployeeNav></EmployeeNav>
     </div>
   );
 };

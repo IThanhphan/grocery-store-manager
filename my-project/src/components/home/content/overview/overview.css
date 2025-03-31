@@ -1,0 +1,348 @@
+/*Tổng quan*/
+.overview {
+  background-color: #E8EAED;
+  padding-top: 15px;
+}
+
+.dashboard1 {
+  margin: 0 61px 0 61px;
+  padding: 0 10px 0 10px;
+  min-height: 440px;
+  display: block;
+  transition: all;
+  transform: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-top {
+  background-color: white;
+  height: 130px;
+  width: 100%;
+  margin: 0px 0 20px 0;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 5px 0px;
+  border-radius: 5px;
+}
+
+.topTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #15171A;
+  height: 14px;
+  margin: 0 0 5px 0;
+  padding: 19px 10px 6px 20px;
+  text-transform: uppercase;
+}
+
+.list {
+  height: 84px;
+  list-style-position: outside;
+}
+
+.dashboardList {
+  margin-top: 15px;
+}
+
+.total {
+  font-size: 12px;
+  text-decoration: none solid rgb(82, 93, 106);
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #525D6A;
+  height: 72px;
+  width: 273.5px;
+  margin: 4px 25px 8px 0;
+  padding: 0px 0 6px 67px;
+  min-height: 72px;
+  max-width: 25%;
+  min-width: calc(25%-34px);
+  display: inline-block;
+}
+
+.number {
+  font-size: 22px;
+  line-height: 28px;
+  text-decoration: none solid rgb(0, 112, 244);
+  text-align: left;
+  height: 25.625px;
+  width: 206.5px;
+  display: block;
+}
+
+.dash_icon {
+  line-height: 32px;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  max-width: 100%;
+  position: absolute;
+  margin-top: 20px;
+  margin-bottom: 28px;
+  margin-left: -42px;
+  display: flex;
+  border-radius: 100%;
+  justify-content: center;
+}
+
+.dash_title {
+  font-size: 12px;
+  text-decoration: none solid rgb(21, 23, 26);
+  color: #15171A;
+  text-align: left;
+  width: 56.5729px;
+  display: inline-block;
+  margin: 10px 0 0 2px;
+}
+
+.yesterday {
+  padding-left: 2px;
+}
+
+.dashboard1 .fa {
+  font-size: 12px;
+  font-weight: 900;
+  height: 12px;
+  width: 13.5px;
+  color: white;
+  width: 10.0208px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.dollar {
+  font-size: 18px;
+  color: white;
+  width: 10.0208px;
+  text-align: center;
+}
+
+.total .number {
+  color: #0070F4;
+}
+
+.total .dash_icon {
+  background-color: #0070F4;
+}
+
+.return {
+  font-size: 12px;
+  text-decoration: none solid rgb(82, 93, 106);
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #525D6A;
+  height: 72px;
+  width: 273.5px;
+  margin: 4px 25px 8px 0;
+  padding: 0px 0px 6px 67px;
+  min-height: 72px;
+  max-width: 25%;
+  min-width: calc(25%-34px);
+  display: inline-block;
+  border-left: 1px solid #E1E3E6;
+}
+
+.return .fa {
+  margin-right: 3px;
+}
+
+.return .number {
+  color: #FF8800;
+}
+
+.return .dash_icon {
+  background-color: #FF8800;
+}
+
+.compare {
+  font-size: 12px;
+  text-decoration: none solid rgb(82, 93, 106);
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #525D6A;
+  height: 72px;
+  width: 273.5px;
+  margin: 4px 25px 8px 0;
+  padding: 0px 0px 6px 67px;
+  min-height: 72px;
+  max-width: 25%;
+  min-width: calc(25%-34px);
+  display: inline-block;
+  border-left: 1px solid #E1E3E6;
+}
+
+.compare .number {
+  color: #00B63E;
+}
+
+.compare .dash_icon {
+  background-color: #00B63E;
+  top: 44px;
+  bottom: 8px;
+}
+
+.dashboard-middle {
+  background-color: white;
+  height: 478.333px;
+  width: 100%;
+  margin: 0 0 20px 0;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 5px 0px;
+  border-radius: 5px;
+}
+
+.midTitleWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-fill {
+  display: flex;
+  height: 23px;
+  width: 318.073px;
+  padding: 7px 0 0 0;
+}
+
+.midTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #15171A;
+  height: 14px;
+  position: absolute;
+  margin: 0 0 5px 0;
+  padding: 19px 10px 6px 20px;
+  text-transform: uppercase;
+}
+
+.title-fill .fa {
+  color: #525D6A;
+  margin-top: 20px;
+  margin-left: 260px;
+  font-size: 14px;
+}
+
+.total-value {
+  margin-top: 18px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0070F4;
+}
+
+.selector {
+  position: relative;
+}
+
+.selector select {
+  white-space: nowrap;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 29px;
+  width: 110px;
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 0 30px 0 5px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid white;
+  color: #0070F4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selector select:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.selector option {
+  color: #15171A;
+  background-color: white;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  border-radius: 5px;
+}
+
+.selector i {
+  position: absolute;
+  right: 20px;
+  margin-top: 33px;
+  transform: translateY(-50%);
+  color: #0070F4;
+  pointer-events: none;
+}
+
+.menu {
+  height: 30px;
+  width: 795.333px;
+  margin: 10px 20px 23px 20px;
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.underline {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 8px;
+  height: 3px;
+  max-width: 67px;
+  background: #007bff;
+}
+
+.content {
+  display: none;
+  margin: 20px 20px;
+  border-radius: 5px;
+}
+
+.content.active {
+  display: block;
+}
+
+.dashboard-bottom {
+  background-color: white;
+  width: 100%;
+  margin: 0 0 20px 0;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 5px 0px;
+  border-radius: 5px;
+}
+
+.dashboard-bottom .title-fill .selector {
+  margin-top: -6px;
+  margin-left: 340px;
+}
+
+.dashboard-bottom .title-fill select {
+  width: 220px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.dashboard-bottom .title-fill select option {
+  text-transform: none;
+  font-weight: 700;
+}
+
+.grap_title {
+  margin: 20px 20px;
+}

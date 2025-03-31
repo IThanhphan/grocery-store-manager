@@ -5,21 +5,26 @@ import { logoutUser } from "../../../../callAPI/authAPI";
 import { createAxiosJWT } from "../../../../callAPI/createInstance";
 import { login } from "../../../../redux/userSlice";
 
-const BoxAccount = () => {
+const BoxAccount = ({ onShowAccountBox }) => {
   const userLogin = useSelector((state) => state.user?.currentUser);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   let axiosJWTLogout = createAxiosJWT(userLogin, dispatch, login);
-
-  const handleLogout = async () => {
-    logoutUser(userLogin?.accessToken, userLogin?._id, dispatch, navigate, axiosJWTLogout);
-  }
 
   useEffect(() => {
     if (!userLogin) {
       navigate("/login");
     }
   });
+
+  const handleLogout = async () => {
+    logoutUser(userLogin?.accessToken, userLogin?._id, dispatch, navigate, axiosJWTLogout);
+  }
+
+  const handleShowAccount = () => {
+    onShowAccountBox(true);
+  }
+
   return (
     <div className="box_67">
       <p>
@@ -30,7 +35,7 @@ const BoxAccount = () => {
       </p>
       <i className="fa-solid fa-circle-user"></i>
       <ul className="menu_user_67">
-        <li className="box_67">
+        <li className="box_67" onClick={handleShowAccount}>
           <i className="fa-solid fa-address-card"></i>
           <a href="#">Tài khoản</a>
         </li>

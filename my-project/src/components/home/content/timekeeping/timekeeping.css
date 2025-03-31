@@ -1,0 +1,443 @@
+.NhanVien_ChamCong_16 {
+  background-color: #E8EAED;
+  width: 100%;
+  height: 590px;
+  overflow-y: auto;
+}
+
+.ChamCong_Header_16 {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.ChamCong_Header_16 h2 {
+  font-size: 28px;
+}
+
+.ChamCong_Search_16 {
+  display: flex;
+  width: 20%;
+  background-color: #fff;
+  height: 30px;
+  padding: 0px 10px;
+  align-items: center;
+  gap: 5px;
+}
+
+.ChamCong_Search_16 input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+
+.ChamCong_Search_16 button {
+  width: 9%;
+  background-color: #FFF;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ChamCong_TuanNay {
+  border: none;
+  background: #fff;
+  width: 90px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ChamCong_Search_16 button:hover {
+  background-color: #F0F0F0;
+}
+
+/*VÃ¹ng cháº¥m cÃ´ng body*/
+
+.ChamCong_Body_16 {
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.ChamCong_Table_16 {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.ChamCong_Body_Header_16 {
+  display: grid;
+  grid-template-columns: 2fr repeat(7, 1fr);
+  background-color: #f5f5f5;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.ChamCong_Header_item_16 span {
+  font-size: 12px;
+  color: #777;
+}
+
+
+
+.ChamCong_Row_16 {
+  display: grid;
+  grid-template-columns: 2fr repeat(7, 1fr);
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.ChamCong_Item_16 {
+  padding: 8px;
+  border-right: 1px solid #ddd;
+}
+
+/*Chá»— bá»‹ che khi khÃ´ng cÃ³ báº£ng nhÃ¢n viÃªn*/
+
+/*VÃ¹ng footer*/
+.NhanVien_ChamCong_Footer_16 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ChamCong_Status_16 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 500px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #999;
+}
+
+.ChamCong_Time_16 {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ChamCong_Status_16 {
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.ChamCong_DuCa_16 {
+  font-weight: bold;
+  color: green;
+}
+
+.ChamCong_TreCa_16 {
+  color: #FF9800;
+  font-weight: bold;
+}
+
+.ChamCong_Thoigiantre_16 {
+  color: #FF9800;
+  font-weight: bold;
+}
+
+.ChamCong_KhongCoCa_16 {
+  color: #777;
+}
+
+.ChamCong_BoCa_16 {
+  color: red;
+}
+
+/*ThÃªm nhÃ¢n viÃªn khi báº£ng cháº¥m cÃ´ng ko cÃ³ nhÃ¢n viÃªn*/
+/*VÃ¹ng nÃºt thÃªm nhÃ¢n viÃªn*/
+
+/* Ná»n má» */
+.NhanVien_Overlay_16 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Há»™p pop-up */
+.NhanVien_ThemNhanVien_16 {
+  background: white;
+  width: 1000px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  position: relative;
+}
+
+.ThemNhanVien_Content_16 {
+  max-height: 400px;
+  /* Giá»›i háº¡n chiá»u cao tá»‘i Ä‘a */
+  overflow-y: auto;
+  /* Táº¡o thanh cuá»™n dá»c khi ná»™i dung dÃ i */
+  padding-right: 10px;
+  /* Táº¡o khoáº£ng trá»‘ng Ä‘á»ƒ thanh cuá»™n khÃ´ng che ná»™i dung */
+}
+
+/*VÃ¹ng nÃºt thÃªm nhÃ¢n viÃªn*/
+
+/* TiÃªu Ä‘á» */
+.ThemNhanVien_Header_16 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* NÃºt Ä‘Ã³ng */
+.ThemNhanVien_Close_16 {
+  border: none;
+  background-color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Pháº§n thÃ´ng tin */
+.ThemNhanVien_info_16 {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* áº¢nh Ä‘áº¡i diá»‡n */
+.ThemNhanVien_avatar_16 {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.box_avatar_16 {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/*áº¢nh ko cÃ³ gÃ¬ sáº½ Ä‘c set lÃ  none*/
+.box_avatar_16 img {
+  width: 100;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  /* áº¨n áº£nh ban Ä‘áº§u */
+}
+
+.upload_btn_16 {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+/* CÃ¡c Ã´ nháº­p */
+.ThemNhanVien_form_16 {
+  flex: 1;
+}
+
+.ThemNhanVien_input_16 {
+  margin-bottom: 10px;
+}
+
+.ThemNhanVien_input_16 label {
+  display: block;
+  font-weight: bold;
+}
+
+.ThemNhanVien_input_16 input,
+.ThemNhanVien_input_16 select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Footer */
+.ThemNhanVien_popup_footer_16 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.ThemNhanVien_popup_footer_16 button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ThemNhanVien_save_16 {
+  background: blue;
+  color: white;
+}
+
+.ThemNhanVien_cancel_16 {
+  background: gray;
+  color: white;
+  margin-left: 10px;
+}
+
+/*End nÃºt thÃªm nhÃ¢n viÃªn*/
+
+/*Thá»±c hiá»‡n cháº¥m cÃ´ng*/
+.ChamCong_Overlay_16 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.NhanVien_ThucHienChamCong_16 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+
+.ThucHienChamCong_Header_16 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.ThucHienChamCong_Ten_16 span {
+  font-weight: normal;
+}
+
+.ThucHienChamCong_Ten_16 span:first-child {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.ThucHienChamCong_Close_16 {
+  border: none;
+  background-color: #FFF;
+  font-size: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ThucHienChamCong_Ten_16 {
+  font-weight: bold;
+}
+
+.ThucHienChamCong_Content_16 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+.ThucHienChamCong_ThoiGianLam_16 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.ThucHienChamCong_XacNhan_16 {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ThucHienChamCong_DuCa_16+label {
+  color: green;
+}
+
+.ThucHienChamCong_TreCa+label {
+  color: #FF9800;
+}
+
+.ThucHienChamCong_BoCa+label {
+  color: red;
+}
+
+.ThucHienChamCong_GhiChu_16 {
+  align-items: center;
+  gap: 15px;
+  display: flex;
+}
+
+.ThucHienChamCong_GhiChu_16 input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.ThucHienChamCong_Footer_16 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.ThucHienChamCong_Footer_16 button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ThucHienChamCong_Save_16 {
+  background: blue;
+  color: white;
+}
+
+.ThucHienChamCong_cancel_16 {
+  background: gray;
+  color: white;
+  margin-left: 10px;
+}
+
+/*End vÃ¹ng thá»±c hiá»‡n cháº¥m cÃ´ng*/
+
+/*Khi khÃ´ng cÃ³ nhÃ¢n viÃªn nÃ o*/
+.NhanVien_Empty_16 {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.NhanVien_Empty_16 i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}

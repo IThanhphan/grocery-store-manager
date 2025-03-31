@@ -108,12 +108,12 @@
 }
 
 /* Ẩn checkbox mặc định */
-input[type="checkbox"] {
+.checkbox-pass {
     display: none;
 }
 
 /* Tạo checkbox tùy chỉnh */
-input[type="checkbox"]+label {
+.checkbox-pass+label {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -121,7 +121,7 @@ input[type="checkbox"]+label {
 }
 
 /* Ô vuông của checkbox */
-input[type="checkbox"]+label::before {
+.checkbox-pass+label::before {
     content: "";
     width: 16px;
     height: 16px;
@@ -134,7 +134,7 @@ input[type="checkbox"]+label::before {
 }
 
 /* Khi checkbox được chọn, thêm dấu tích màu xanh lá */
-input[type="checkbox"]:checked+label::before {
+.checkbox-pass:checked+label::before {
     content: "✔";
     /* Dấu tích */
     font-size: 14px;

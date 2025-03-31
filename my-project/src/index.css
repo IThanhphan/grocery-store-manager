@@ -11,6 +11,10 @@ body{
   line-height: 18px;
 }
 
+input:focus {
+  outline: none;
+}
+
 .link-no-underline {
   text-decoration: none;
 }

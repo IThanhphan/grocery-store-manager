@@ -1,0 +1,371 @@
+.NhanVien_16 {
+  background-color: #E8DAED;
+  padding: 30px;
+  padding-left: 40px;
+  width: 100%;
+  height: 590px;
+  overflow-y: auto;
+}
+
+/*VÃ¹ng nÃºt thÃªm nhÃ¢n viÃªn*/
+
+/* Ná»n má» */
+.NhanVien_Overlay_16 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Há»™p pop-up */
+.NhanVien_ThemNhanVien_16 {
+  background: white;
+  width: 1000px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  position: relative;
+}
+
+.ThemNhanVien_Content_16 {
+  max-height: 400px;
+  /* Giá»›i háº¡n chiá»u cao tá»‘i Ä‘a */
+  overflow-y: auto;
+  /* Táº¡o thanh cuá»™n dá»c khi ná»™i dung dÃ i */
+  padding-right: 10px;
+  /* Táº¡o khoáº£ng trá»‘ng Ä‘á»ƒ thanh cuá»™n khÃ´ng che ná»™i dung */
+}
+
+/*VÃ¹ng nÃºt thÃªm nhÃ¢n viÃªn*/
+
+/* TiÃªu Ä‘á» */
+.ThemNhanVien_Header_16 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* NÃºt Ä‘Ã³ng */
+.ThemNhanVien_Close_16 {
+  border: none;
+  background-color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Pháº§n thÃ´ng tin */
+.ThemNhanVien_info_16 {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* áº¢nh Ä‘áº¡i diá»‡n */
+.ThemNhanVien_avatar_16 {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.box_avatar_16 {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/*áº¢nh ko cÃ³ gÃ¬ sáº½ Ä‘c set lÃ  none*/
+.box_avatar_16 img {
+  width: 100;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  /* áº¨n áº£nh ban Ä‘áº§u */
+}
+
+.upload_btn_16 {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+/* CÃ¡c Ã´ nháº­p */
+.ThemNhanVien_form_16 {
+  flex: 1;
+}
+
+.ThemNhanVien_input_16 {
+  margin-bottom: 10px;
+}
+
+.ThemNhanVien_input_16 label {
+  display: block;
+  font-weight: bold;
+}
+
+.ThemNhanVien_input_16 input,
+.ThemNhanVien_input_16 select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Footer */
+.ThemNhanVien_popup_footer_16 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.ThemNhanVien_popup_footer_16 button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ThemNhanVien_save_16 {
+  background: blue;
+  color: white;
+}
+
+.ThemNhanVien_cancel_16 {
+  background: gray;
+  color: white;
+  margin-left: 10px;
+}
+
+/*End nÃºt thÃªm nhÃ¢n viÃªn*/
+
+.NhanVien_NhanVien_Header_16 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NhanVien_NhanVien_Header_16 h2 {
+  font-size: 28px;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.NhanVien_Search_16 {
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  margin-bottom: 50px;
+}
+
+/*End header nhÃ¢n viÃªn*/
+
+/*VÃ¹ng thÃ´ng tin nhÃ¢n viÃªn*/
+.Search_16 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-right: 100px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.Search_16 ion-icon {
+  font-size: 18px;
+  color: #666;
+  padding-left: 5px;
+  z-index: 1;
+}
+
+.Search_16 input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 5px;
+  width: 300px;
+}
+
+.NhanVien_btn_16 button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 40px;
+}
+
+.NhanVien_btn_16 button:hover {
+  background-color: #218838;
+}
+
+.NhanVien_btn_16 button i {
+  font-size: 14px;
+}
+
+.NhanVien_Table_16 {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.NhanVien_Table_16 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.NhanVien_Header_16,
+.NhanVien_Row_16 {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+
+/*Khi khÃ´ng cÃ³ nhÃ¢n viÃªn nÃ o*/
+.NhanVien_Empty_16 {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  display: block;
+}
+
+.NhanVien_Empty_16 i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.NhanVien_Header_16 {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.NhanVien_Item_16 {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  border-right: 1px solid #ddd;
+}
+
+.NhanVien_Item:last-child {
+  border-right: none;
+}
+
+
+/*Chi tiáº¿t nhÃ¢n viÃªn*/
+.NhanVien_ChiTietNhanVien_16 {
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.NhanVien_ChiTiet_16 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: #fff;
+}
+
+.NhanVien_HinhAnh_16 {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+}
+
+.NhanVien_HinhAnh_16 img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.NhanVien_ThongTin_16 {
+  display: flex;
+  gap: 20px;
+  width: 85%;
+}
+
+.NhanVien_Cot_16 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.NhanVien_Item_16 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.NhanVien_Item_16 strong {
+  width: 150px;
+  /* Äáº£m báº£o nhÃ£n (label) cÃ³ cÃ¹ng Ä‘á»™ rá»™ng */
+  flex-shrink: 0;
+}
+
+.NhanVien_Item_16 input,
+.NhanVien_Item_16 select,
+.NhanVien_Item_16 textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  width: 100%;
+  /* CÃ¡c khung nháº­p cÃ¹ng chiá»u rá»™ng */
+  background: transparent;
+  outline: none;
+  /* Bá» viá»n xanh khi báº¥m vÃ o */
+}
+
+
+.NhanVien_HanhDong_16 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.NhanVien_btn-luu_16,
+.NhanVien_btn-xoa_16 {
+  padding: 8px 12px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.NhanVien_btn-luu_16 {
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.NhanVien_btn-xoa_16 {
+  background: #dc3545;
+  color: white;
+  border-radius: 5px;
+}
+
+/*End NhÃ¢n viÃªn*/

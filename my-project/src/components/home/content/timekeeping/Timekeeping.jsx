@@ -1,0 +1,36 @@
+import "./timekeeping.css";
+import TimekeepingHeader from "./timekeepingHeader/TimekeepingHeader";
+import TimekeepingModal from "./timekeepingModal/TimekeepingModal";
+import TimekeepingTable from "./timekeepingTable/TimekeepingTable";
+import { getAllEmployee } from "../../../../callAPI/employeeAPI";
+import { useState, useEffect } from "react";
+
+const Timekeeping = () => {
+  const [employeeList, setEmployeeList] = useState(null);
+  useEffect(() => {
+    const fetchEmployee = async () => {
+      const employeeArr = await getAllEmployee();
+      setEmployeeList(employeeArr);
+    };
+    fetchEmployee();
+  }, []);
+  console.log(employeeList);
+  return (
+    <div className="NhanVien_ChamCong_16">
+      <TimekeepingHeader></TimekeepingHeader>
+      {/* <!--Thực hiện chấm công--> */}
+      <TimekeepingModal></TimekeepingModal>
+      {/* <!--End Thực hiện chấm công--> */}
+      {employeeList ? (
+        <TimekeepingTable employeeListFromParent={employeeList}></TimekeepingTable>
+      ) : (
+        <div className="NhanVien_Empty_16">
+          <i className="fa-solid fa-user"></i>
+          <p>Chưa có nhân viên.</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Timekeeping;
