@@ -1,4 +1,4 @@
-import "./employee.css"
+import "./employee.css";
 import { useState, useEffect } from "react";
 import AddEmployeeModal from "./addEmployeeModal/AddEmployeeModal";
 import EmployeeHeader from "./employeeHeader/EmployeeHeader";
@@ -14,13 +14,23 @@ const Employee = () => {
       setEmployeeList(employeeArr);
     };
     fetchEmployee();
-  }, []);
-  console.log(employeeList);
+  }, []);  
   return (
     <div className="NhanVien_16">
-      {showAddEmployeeModal ? <AddEmployeeModal onSetShowAddEmployeeModal={setShowAddEmployeeMode}></AddEmployeeModal> : <></>}
-      <EmployeeHeader onSetShowAddEmployeeModal={setShowAddEmployeeMode}></EmployeeHeader>
-      <EmployeeTable employeeListFromParent={employeeList} onSetShowAddEmployeeModal={setShowAddEmployeeMode}></EmployeeTable>
+      {showAddEmployeeModal ? (
+        <AddEmployeeModal
+          onSetShowAddEmployeeModal={setShowAddEmployeeMode}
+        ></AddEmployeeModal>
+      ) : (
+        <></>
+      )}
+      <EmployeeHeader
+        onSetShowAddEmployeeModal={setShowAddEmployeeMode}
+      ></EmployeeHeader>
+      <EmployeeTable
+        employeeListFromParent={employeeList}
+        onSetShowAddEmployeeModal={setShowAddEmployeeMode}
+      ></EmployeeTable>
     </div>
   );
 };

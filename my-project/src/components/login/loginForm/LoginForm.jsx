@@ -12,7 +12,7 @@ const LoginForm = () => {
   const handleSubmitLogin = (e) => {
     e.preventDefault();
     const newUser = {
-      username: username,
+      name: username,
       password: password,
     };
     loginUser(newUser, dispatch, navigate);

@@ -29,7 +29,7 @@ const BoxAccount = ({ onShowAccountBox }) => {
     <div className="box_67">
       <p>
         <b>
-          {userLogin?.username} ({!userLogin?.manager ? "Nhân viên" : "Quản lý"}
+          {userLogin?.name} ({!userLogin?.manager ? "Nhân viên" : "Quản lý"}
           )
         </b>
       </p>

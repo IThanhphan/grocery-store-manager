@@ -1,4 +1,13 @@
+import { useState } from "react";
+import { addNewBrand } from "../../../../../../callAPI/productAPI";
+
 const PopupProductBrand = ({ onSetShowBrandPopup }) => {
+  const [newBrand, setNewBrand] = useState("");
+  const handleAddBrand = async () => {
+    await addNewBrand(newBrand);
+    setNewBrand("");
+    onSetShowBrandPopup(false);
+  }
   return (
     <div className="modal-08" id="brand-modal">
       <div className="modal-content-08">
@@ -15,11 +24,13 @@ const PopupProductBrand = ({ onSetShowBrandPopup }) => {
               type="text"
               className="product-text-input-08"
               placeholder="Tên thương hiệu"
+              value={newBrand}
+              onChange={(e) => setNewBrand(e.target.value)}
             />
           </div>
         </div>
         <div className="modal-footer-08">
-          <button className="save-btn-08">
+          <button className="save-btn-08" onClick={handleAddBrand}>
             <i className="fas fa-save"></i> Lưu
           </button>
           <button className="cancel-btn-08 close-modal-btn" onClick={() => onSetShowBrandPopup(false)}>

@@ -1,16 +1,13 @@
-.NhanVien_16 {
-  background-color: #E8DAED;
+.KhachHang_16{
+  background-color: #E8EAED;
   padding: 30px;
   padding-left: 40px;
   width: 100%;
-  height: 590px;
-  overflow-y: auto;
 }
 
-/*VÃ¹ng nÃºt thÃªm nhÃ¢n viÃªn*/
 
 /* Ná»n má» */
-.NhanVien_Overlay_16 {
+.KhachHang_Overlay_16 {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +21,7 @@
 }
 
 /* Há»™p pop-up */
-.NhanVien_ThemNhanVien_16 {
+.KhachHang_ThemKhachHang_16 {
   background: white;
   width: 1000px;
   border-radius: 8px;
@@ -34,19 +31,15 @@
   position: relative;
 }
 
-.ThemNhanVien_Content_16 {
-  max-height: 400px;
-  /* Giá»›i háº¡n chiá»u cao tá»‘i Ä‘a */
-  overflow-y: auto;
-  /* Táº¡o thanh cuá»™n dá»c khi ná»™i dung dÃ i */
-  padding-right: 10px;
-  /* Táº¡o khoáº£ng trá»‘ng Ä‘á»ƒ thanh cuá»™n khÃ´ng che ná»™i dung */
+.ThemKhachHang_Content_16{
+  max-height: 400px; /* Giá»›i háº¡n chiá»u cao tá»‘i Ä‘a */
+  overflow-y: auto;  /* Táº¡o thanh cuá»™n dá»c khi ná»™i dung dÃ i */
+  padding-right: 10px; /* Táº¡o khoáº£ng trá»‘ng Ä‘á»ƒ thanh cuá»™n khÃ´ng che ná»™i dung */
 }
 
-/*VÃ¹ng nÃºt thÃªm nhÃ¢n viÃªn*/
 
 /* TiÃªu Ä‘á» */
-.ThemNhanVien_Header_16 {
+.ThemKhachHang_Header_16 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +48,7 @@
 }
 
 /* NÃºt Ä‘Ã³ng */
-.ThemNhanVien_Close_16 {
+.ThemKhachHang_Close_16 {
   border: none;
   background-color: #fff;
   font-size: 20px;
@@ -63,13 +56,13 @@
 }
 
 /* Pháº§n thÃ´ng tin */
-.ThemNhanVien_info_16 {
+.ThemKhachHang_info_16 {
   display: flex;
   margin-top: 20px;
 }
 
 /* áº¢nh Ä‘áº¡i diá»‡n */
-.ThemNhanVien_avatar_16 {
+.ThemKhachHang_avatar_16 {
   text-align: center;
   margin-right: 20px;
 }
@@ -91,8 +84,7 @@
   width: 100;
   height: 100%;
   object-fit: cover;
-  display: none;
-  /* áº¨n áº£nh ban Ä‘áº§u */
+  display: none; /* áº¨n áº£nh ban Ä‘áº§u */
 }
 
 .upload_btn_16 {
@@ -101,21 +93,21 @@
 }
 
 /* CÃ¡c Ã´ nháº­p */
-.ThemNhanVien_form_16 {
+.ThemKhachHang_form_16 {
   flex: 1;
 }
 
-.ThemNhanVien_input_16 {
+.ThemKhachHang_input_16 {
   margin-bottom: 10px;
 }
 
-.ThemNhanVien_input_16 label {
+.ThemKhachHang_input_16 label {
   display: block;
   font-weight: bold;
 }
 
-.ThemNhanVien_input_16 input,
-.ThemNhanVien_input_16 select {
+.ThemKhachHang_input_16 input,
+.ThemKhachHang_input_16 select {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -123,55 +115,54 @@
 }
 
 /* Footer */
-.ThemNhanVien_popup_footer_16 {
+.ThemKhachHang_popup_footer_16 {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
 }
 
-.ThemNhanVien_popup_footer_16 button {
+.ThemKhachHang_popup_footer_16 button {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.ThemNhanVien_save_16 {
+.ThemKhachHang_save_16 {
   background: blue;
   color: white;
 }
 
-.ThemNhanVien_cancel_16 {
+.ThemKhachHang_cancel_16 {
   background: gray;
   color: white;
   margin-left: 10px;
 }
 
-/*End nÃºt thÃªm nhÃ¢n viÃªn*/
 
-.NhanVien_NhanVien_Header_16 {
+
+.KhachHang_KhachHang_Header_16{
   display: flex;
   justify-content: space-between;
 }
 
-.NhanVien_NhanVien_Header_16 h2 {
+.KhachHang_KhachHang_Header_16 h2{
   font-size: 28px;
   font-weight: bold;
   align-items: center;
   margin-top: 10px;
 }
 
-.NhanVien_Search_16 {
+.KhachHang_Search_16{
   display: flex;
   gap: 10px;
   height: 40px;
   margin-bottom: 50px;
 }
 
-/*End header nhÃ¢n viÃªn*/
 
-/*VÃ¹ng thÃ´ng tin nhÃ¢n viÃªn*/
-.Search_16 {
+
+.Search_16{
   justify-content: center;
   align-items: center;
   display: flex;
@@ -200,7 +191,7 @@
   width: 300px;
 }
 
-.NhanVien_btn_16 button {
+.KhachHang_btn_16 button {
   background-color: #28a745;
   color: white;
   border: none;
@@ -214,72 +205,70 @@
   height: 40px;
 }
 
-.NhanVien_btn_16 button:hover {
+.KhachHang_btn_16 button:hover {
   background-color: #218838;
 }
 
-.NhanVien_btn_16 button i {
+.KhachHang_btn_16 button i {
   font-size: 14px;
 }
 
-.NhanVien_Table_16 {
+.KhachHang_Table_16{
   width: 100%;
   overflow-x: auto;
   background: #fff;
   border-radius: 5px;
 }
 
-.NhanVien_Table_16 {
+.KhachHang_Table_16 {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.NhanVien_Header_16,
-.NhanVien_Row_16 {
+.KhachHang_Header_16, .KhachHang_Row_16 {
   display: flex;
   border-bottom: 1px solid #ccc;
   padding: 5px;
   cursor: pointer;
 }
 
-/*Khi khÃ´ng cÃ³ nhÃ¢n viÃªn nÃ o*/
-.NhanVien_Empty_16 {
+
+.KhachHang_Empty_16 {
   text-align: center;
   padding: 20px;
   color: #666;
   display: block;
 }
-
-.NhanVien_Empty_16 i {
+.KhachHang_Empty_16 i{
   font-size: 40px;
   margin-bottom: 10px;
 }
 
-.NhanVien_Header_16 {
+.KhachHang_Header_16 {
   font-weight: bold;
   background-color: #f2f2f2;
 }
 
-.NhanVien_Item_16 {
+.KhachHang_Item_16 {
   flex: 1;
   text-align: center;
   padding: 5px;
   border-right: 1px solid #ddd;
 }
 
-.NhanVien_Item:last-child {
+.KhachHang_Item:last-child {
   border-right: none;
 }
 
 
-/*Chi tiáº¿t nhÃ¢n viÃªn*/
-.NhanVien_ChiTietNhanVien_16 {
+
+.KhachHang_ChiTietKhachHang_16 {
   background-color: #f9f9f9;
   padding: 10px;
 }
 
-.NhanVien_ChiTiet_16 {
+.KhachHang_ChiTiet_16 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -288,7 +277,7 @@
   background: #fff;
 }
 
-.NhanVien_HinhAnh_16 {
+.KhachHang_HinhAnh_16 {
   width: 15%;
   display: flex;
   align-items: center;
@@ -296,77 +285,65 @@
   border-right: 1px solid #ccc;
 }
 
-.NhanVien_HinhAnh_16 img {
+.KhachHang_HinhAnh_16 img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border: 1px solid #ddd;
 }
 
-.NhanVien_ThongTin_16 {
+.KhachHang_ThongTin_16 {
   display: flex;
   gap: 20px;
   width: 85%;
 }
-
-.NhanVien_Cot_16 {
+.KhachHang_Cot_16 {
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex: 1;
 }
-
-.NhanVien_Item_16 {
+.KhachHang_Item_16 {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.NhanVien_Item_16 strong {
+.KhachHang_Item_16 strong {
   width: 150px;
-  /* Äáº£m báº£o nhÃ£n (label) cÃ³ cÃ¹ng Ä‘á»™ rá»™ng */
   flex-shrink: 0;
 }
-
-.NhanVien_Item_16 input,
-.NhanVien_Item_16 select,
-.NhanVien_Item_16 textarea {
+.KhachHang_Item_16 input, .KhachHang_Item_16 select, .KhachHang_Item_16 textarea {
   border: none;
   border-bottom: 1px solid #ccc;
   padding: 5px;
   width: 100%;
-  /* CÃ¡c khung nháº­p cÃ¹ng chiá»u rá»™ng */
   background: transparent;
   outline: none;
-  /* Bá» viá»n xanh khi báº¥m vÃ o */
 }
 
 
-.NhanVien_HanhDong_16 {
+.KhachHang_HanhDong_16 {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding-top: 10px;
 }
 
-.NhanVien_btn-luu_16,
-.NhanVien_btn-xoa_16 {
+.KhachHang_btn-luu_16, .KhachHang_btn-xoa_16 {
   padding: 8px 12px;
   margin-left: 10px;
   border: none;
   cursor: pointer;
 }
 
-.NhanVien_btn-luu_16 {
+.KhachHang_btn-luu_16 {
   background: #007bff;
   color: white;
   border-radius: 5px;
 }
 
-.NhanVien_btn-xoa_16 {
+.KhachHang_btn-xoa_16 {
   background: #dc3545;
   color: white;
   border-radius: 5px;
 }
-
-/*End NhÃ¢n viÃªn*/

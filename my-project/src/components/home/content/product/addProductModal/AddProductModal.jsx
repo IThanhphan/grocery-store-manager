@@ -11,38 +11,28 @@ const AddProductModal = () => {
   const [showBrandPopup, setShowBrandPopup] = useState(false);
   const [showSupplierPopup, setShowSupplierPopup] = useState(false);
   const [image, setImage] = useState(null);
-  const [imageFile, setImageFile] = useState(null);
+  const [productModal, setProductModal] = useState({
+    importPrice: 0,
+    sellPrice: 0,
+    name: "",
+    stock: 0,
+    expirationDate: "",
+    categoryName: "",
+    supplierName: "",
+    brand: "",
+    unit: "",
+    imageFile: null,
+  });
   const handleDrop = (event) => {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (file) {
       setImage(URL.createObjectURL(file));
-      setImageFile(file);
+      setProductModal((pre) => {
+        return { ...pre, imageFile: file };
+      });
     }
   };
-  // const handleUpload = async () => {
-  //   if (!imageFile) return alert("Chưa có file nào!");
-
-  //   const formData = new FormData();
-  //   formData.append("file", imageFile);
-
-  //   try {
-  //     const response = await fetch("http://localhost:5000/upload", {
-  //       method: "POST",
-  //       body: formData,
-  //     });
-
-  //     if (response.ok) {
-  //       const result = await response.json();
-  //       console.log("Upload thành công:", result);
-  //     } else {
-  //       console.error("Lỗi upload");
-  //     }
-  //   } catch (error) {
-  //     console.error("Lỗi mạng:", error);
-  //   }
-  // };
-  console.log(imageFile);
   return (
     <div className="addProduct-body-08">
       <div className="container-08">
@@ -57,6 +47,11 @@ const AddProductModal = () => {
           </ul>
         </div>
         <MainProductInfo
+          showCategoryPopupFromParent={showCategoryPopup}
+          showBrandPopupFromParent={showBrandPopup}
+          showSupplierPopupFromParent={showSupplierPopup}
+          productModalFromParent={productModal}
+          onSetProductModal={setProductModal}
           onSetShowCategoryPopup={setShowCategoryPopup}
           onSetShowBrandPopup={setShowBrandPopup}
           onSetShowSupplierPopup={setShowSupplierPopup}
@@ -70,7 +65,9 @@ const AddProductModal = () => {
             onDrop={handleDrop}
             onClick={() => {
               setImage(null);
-              setImageFile(null);
+              setProductModal((pre) => {
+                return { ...pre, imageFile: null };
+              });
             }}
           >
             {image ? (
@@ -85,7 +82,10 @@ const AddProductModal = () => {
           </div>
         </div>
         {/* <!-- Footer --> */}
-        <FooterProductInfo></FooterProductInfo>
+        <FooterProductInfo
+          productModalFromParent={productModal}
+          onSetProductModal={setProductModal}
+        ></FooterProductInfo>
       </div>
       {/* <!-- Popup (Modal) cho Nhóm hàng --> */}
       {showCategoryPopup ? (

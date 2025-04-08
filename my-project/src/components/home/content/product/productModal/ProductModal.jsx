@@ -1,82 +1,96 @@
 import { useRef } from "react";
 import { updateProduct } from "../../../../../callAPI/productAPI";
+import { apiName } from "../../../../../config/APIname";
 
-const ProductModal = ({ productInfo, onSetShowProduct }) => {
-  console.log(productInfo);
+const ProductModal = ({ product, onSetProducts, onSetChosenProduct}) => {
+  console.log(product);
   const modalRef = useRef(null);
   const infoProductsModal = [
     {
       name: "Mã hàng:",
       key: "productId",
-      value: productInfo.productId,
+      value: product.productId,
       canChange: false
     },
     {
       name: "Loại hàng:",
       key: "categoryName",
-      value: productInfo.categoryName,
+      value: product.categoryName,
       canChange: false
     },
     {
       name: "Thương hiệu:",
       key: "brand",
-      value: productInfo.brand,
+      value: product.brand,
+      canChange: false
+    },
+    {
+      name: "Ngày hết hạn:",
+      key: "expirationDate",
+      value: new Date(product.expirationDate).toLocaleDateString("vi-VN"),
       canChange: false
     },
     {
       name: "Định mức tồn:",
       key: "stock",
-      value: productInfo.stock,
+      value: product.stock,
       canChange: false
     },
     {
       name: "Giá bán:",
       key: "sellPrice",
-      value: productInfo.sellPrice,
+      value: product.sellPrice,
       canChange: true
     },
     {
       name: "Giá vốn:",
       key: "importPrice",
-      value: productInfo.importPrice,
+      value: product.importPrice,
+      canChange: false
+    },
+    {
+      name: "Đơn vị:",
+      key: "unit",
+      value: product.unit,
       canChange: false
     },
     {
       name: "Nhà cung cấp:",
       key: "supplierName",
-      value: productInfo.supplierName,
+      value: product.supplierName,
       canChange: false
     },
   ];
   const handleCloseProductInfo = () => {
-    onSetShowProduct(null);
+    onSetChosenProduct(null);
   };
 
   const changeProductInfo = (e, item) => {
-    onSetShowProduct((pre) => {
+    onSetChosenProduct((pre) => {
       return {...pre, [item.key]: e.target.value}
     });
   }
 
   const handleUpdate = () => {
-    console.log(productInfo);
-    updateProduct(productInfo.id, {
-      productId: productInfo.productId,
-      categoryName: productInfo.categoryName,
-      brand: productInfo.brand,
-      stock: productInfo.stock,
-      sellPrice: productInfo.sellPrice,
-      importPrice: productInfo.importPrice,
-      supplierName: productInfo.supplierName
+    updateProduct(product._id, {
+      sellPrice: product.sellPrice
     });
-    onSetShowProduct(null);
+    onSetProducts((pre) => {
+      pre.forEach((item) => {
+        if (item._id === product._id) {
+          item.sellPrice = product.sellPrice;
+        }
+      });
+      return pre;
+    })
+    onSetChosenProduct(null);
   }
 
   return (
     <div className="modal" id="productModal" ref={modalRef}>
       <div className="modal-content">
         <div className="modal-header">
-          <h2 id="modalProductName">Tên sản phẩm: {productInfo.name}</h2>
+          <h2 id="modalProductName">Tên sản phẩm: {product.name}</h2>
           <span className="modal-close" onClick={handleCloseProductInfo}>
             &times;
           </span>
@@ -93,14 +107,14 @@ const ProductModal = ({ productInfo, onSetShowProduct }) => {
             </div>
             <div className="modal-product-details">
               <div className="modal-product-image">
-                <img id="modalProductImage" src={productInfo.image} alt="Hình ảnh sản phẩm" />
+                <img id="modalProductImage" src={`${apiName}${product.image}`} alt="Hình ảnh sản phẩm" />
               </div>
               <div className="modal-product-meta">
                 {infoProductsModal.map((item) => (
                   <p key={item.key}>
                     <strong>{item.name}</strong>
                     <span id="modalProductCode">
-                      <input type="text" value={item.value} onChange={(e) => changeProductInfo(e, item)} disabled={!item.canChange} />
+                      <input type="text" value={item.value} onChange={(e) => changeProductInfo(e, item)} disabled={!item.canChange}/>
                     </span>
                   </p>
                 ))}

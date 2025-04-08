@@ -1,61 +1,31 @@
-import { useState, useEffect } from "react";
-import { getAllProducts } from "../../../../../callAPI/productAPI";
 import { apiName } from "../../../../../config/APIname";
 
-const ProductTable = ({ productInfo, onSetShowProduct }) => {
-  console.log("rerender");
-  const [selectAll, setSelectAll] = useState(false);
-  const [selectedRows, setSelectedRows] = useState({});
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const productArr = await getAllProducts();
-        const formattedProducts = productArr.map((item) => ({
-          id: item._id,
-          productId: item.productId,
-          name: item.name,
-          categoryName: item.categoryName,
-          supplierName: item.supplierName,
-          brand: item.brand,
-          unit: item.unit,
-          sellPrice: item.sellPrice,
-          importPrice: item.importPrice,
-          stock: item.stock,
-          ordered: 0,
-          date: new Date(item.createdAt).toISOString().split("T")[0],
-          image: `${apiName}${item.image}`,
-        }));
-        setProducts(formattedProducts);
-      } catch (error) {
-        console.error("Lỗi khi gọi API:", error);
-      }
-    };
-    fetchProducts();
-  }, [productInfo]);
-
-  const handleSelectAll = () => {
-    setSelectAll((prev) => {
-      const newState = !prev;
-      setSelectedRows(
-        newState ? Object.fromEntries(products.map((p) => [p.id, true])) : {}
-      );
-      return newState;
-    });
-  };
-
-  const handleSelectRow = (id) => {
-    setSelectedRows((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
-
+const ProductTable = ({
+  productInfo,
+  listDeleteProducts,
+  onSetListDelete,
+  onSetChosenProduct,
+}) => {
   const handleShowProduct = (product, e) => {
     if (e.target.tagName === "INPUT") return;
-    onSetShowProduct(product);
+    onSetChosenProduct(product);
   };
+
+  const handleCheckProduct = (productId) => {
+    onSetListDelete((prev) =>
+      prev.includes(productId) ? prev.filter(id => id !== productId) : [...prev, productId]
+    );
+  };
+
+  const handleCheckAllProducts = (e) => {
+    if (e.target.checked) {
+      onSetListDelete(productInfo.map(p => p._id));
+    } else {
+      onSetListDelete([]);
+    }
+  }
+
+  console.log(listDeleteProducts);
 
   return (
     <div className="main-table">
@@ -73,11 +43,7 @@ const ProductTable = ({ productInfo, onSetShowProduct }) => {
           <thead>
             <tr>
               <th>
-                <input
-                  type="checkbox"
-                  checked={selectAll}
-                  onChange={handleSelectAll}
-                />
+                <input type="checkbox" onChange={handleCheckAllProducts}/>
               </th>
               <th>Hình ảnh minh họa</th>
               <th>Mã hàng</th>
@@ -90,29 +56,32 @@ const ProductTable = ({ productInfo, onSetShowProduct }) => {
             </tr>
           </thead>
           <tbody>
-            {products.map((product) => (
-              <tr key={product.id} onClick={(e) => handleShowProduct(product, e)}>
+            {productInfo.map((product) => (
+              <tr
+                key={product._id}
+                onClick={(e) => handleShowProduct(product, e)}
+              >
                 <td>
                   <input
                     type="checkbox"
-                    checked={!!selectedRows[product.id]}
-                    onChange={() => handleSelectRow(product.id)}
+                    onChange={() => handleCheckProduct(product._id)}
+                    checked={listDeleteProducts.includes(product._id)}
                   />
                 </td>
                 <td>
                   <img
-                    src={product.image}
+                    src={`${apiName}${product.image}`}
                     alt={product.name}
                     className="product-image"
                   />
                 </td>
                 <td>{product.productId}</td>
                 <td>{product.name}</td>
-                <td>{product.sellPrice}</td>
-                <td>{product.importPrice}</td>
+                <td>{product.sellPrice.toLocaleString("vi-VN")}</td>
+                <td>{product.importPrice.toLocaleString("vi-VN")}</td>
                 <td>{product.stock}</td>
-                <td>{product.ordered}</td>
-                <td>{product.date}</td>
+                <td>0</td>
+                <td>{new Date(product.createdAt).toLocaleDateString("vi-VN")}</td>
               </tr>
             ))}
           </tbody>
