@@ -8,6 +8,14 @@ const AddSupplierModal = ({
   const handleAddSupplier = async () => {
     await addNewSupplier(supplierModalFromParent);
     onSetShowAddSupplierModal(false);
+    onSetSupplierModal({
+      name: "",
+      address: "",
+      phone: "",
+      email: "",
+      company: "",
+      note: "",
+    });
   }
   return (
     <div className="DoiTac_Overlay_16">

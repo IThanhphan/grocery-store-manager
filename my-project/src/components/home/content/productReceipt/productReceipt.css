@@ -1,4 +1,4 @@
-.Order_67 {
+/* .Order_67 {
   padding: 0px 30px;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -6,7 +6,7 @@
   gap: 20px;
   height: 100%;
   align-content: stretch;
-}
+} */
 
 .Order_67>h2 {
   margin-top: 25px;
@@ -160,7 +160,6 @@
 
 /* menu 3 gáº¡ch ngang */
 .table_checkbox_67 {
-  display: none;
   background-color: #fff;
   height: cover;
   width: 200px;
@@ -315,7 +314,6 @@
 
 .name_columns_67 th {
   padding: 10px;
-  white-space: nowrap;
 }
 
 .body_table_67 {
@@ -392,9 +390,4 @@
 .data_67 {
   background-color: #fff;
   border: 1px solid rgb(225, 227, 230);
-}
-
-.data_67 td {
-  white-space: nowrap;
-  padding: 20px;
 }

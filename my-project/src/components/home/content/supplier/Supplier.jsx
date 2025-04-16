@@ -8,23 +8,25 @@ import { getAllSupplier } from "../../../../callAPI/supplierAPI";
 const Supplier = () => {
   const [showAddSupplierModal, setShowAddSupplierModal] = useState(false);
   const [listSupplier, setListSupplier] = useState([]);
+  const [firstStateListSupplier, setFirstStateListSupplier] = useState([]);
   const [supplierModal, setSupplierModal] = useState({
     name: "",
     address: "",
     phone: "",
     email: "",
     company: "",
-    note: ""
-  })
+    note: "",
+  });
   const [listDeleteSupplier, setListDeleteSupplier] = useState([]);
 
   useEffect(() => {
     const fetchSupplier = async () => {
       const supplierArr = await getAllSupplier();
       setListSupplier(supplierArr);
+      setFirstStateListSupplier(supplierArr);
     };
     fetchSupplier();
-  }, [showAddSupplierModal]);
+  }, [showAddSupplierModal, listDeleteSupplier]);
   return (
     <section className="DoiTac_16">
       {showAddSupplierModal ? (
@@ -38,6 +40,7 @@ const Supplier = () => {
       )}
 
       <SupplierHeader
+        firstStateListSupplierFromParent={firstStateListSupplier}
         listDeleteSupplierFromParent={listDeleteSupplier}
         onSetListSupplier={setListSupplier}
         onSetShowAddSupplierModal={setShowAddSupplierModal}

@@ -4,8 +4,10 @@ import ProductNav from "./productNav/ProductNav";
 import TransactionNav from "./transactionNav/TransactionNav";
 import PartnerNav from "./partnerNav/PartnerNav";
 import EmployeeNav from "./employeeNav/EmployeeNav";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const userLogin = useSelector((state) => state.user?.currentUser);
   return (
     <div className="toolbar_67">
       {/* Mục Tổng quan */}
@@ -17,7 +19,8 @@ const Navbar = () => {
       {/* Mục Đối tác */}
       <PartnerNav></PartnerNav>
       {/* Mục Nhân viên */}
-      <EmployeeNav></EmployeeNav>
+      {userLogin.manager ? <EmployeeNav></EmployeeNav> : <></>}
+      
     </div>
   );
 };

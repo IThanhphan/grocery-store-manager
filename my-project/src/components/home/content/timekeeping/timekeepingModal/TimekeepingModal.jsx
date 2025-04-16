@@ -1,4 +1,4 @@
-const TimekeepingModal = () => {
+const TimekeepingModal = ({ onSetShowTimekeepingModal }) => {
   return (
     <div className="ChamCong_Overlay_16">
       <div className="NhanVien_ThucHienChamCong_16">
@@ -9,7 +9,7 @@ const TimekeepingModal = () => {
             <span>17/3/2025</span>
           </div>
           <div className="ThucHienChamCong_Close_16">
-            <button className="ThucHienChamCong_Close_16">
+            <button className="ThucHienChamCong_Close_16" onClick={() => onSetShowTimekeepingModal(false)}>
               <i className="fa-solid fa-xmark"></i>
             </button>
           </div>
@@ -52,7 +52,7 @@ const TimekeepingModal = () => {
         </div>
         <div className="ThucHienChamCong_Footer_16">
           <button className="ThucHienChamCong_Save_16">Lưu</button>
-          <button className="ThucHienChamCong_cancel_16">Bỏ qua</button>
+          <button className="ThucHienChamCong_cancel_16"  onClick={() => onSetShowTimekeepingModal(false)}>Bỏ qua</button>
         </div>
       </div>
     </div>

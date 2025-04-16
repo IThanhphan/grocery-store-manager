@@ -24,3 +24,19 @@ export const logoutUser = async (accessToken, id, dispatch, navigate, axiosJWT) 
     console.log(err);
   }
 }
+
+export const addNewUser = async (newUser) => {
+  try {
+    await axios.post(`${apiName}/auth/add-a-new-user`, newUser);    
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const deleteUser = async (id) => {
+  try {
+    await axios.delete(`${apiName}/auth/delete-a-user?id=${id}`);    
+  } catch (err) {
+    console.log(err);
+  }
+}

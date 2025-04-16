@@ -1,4 +1,4 @@
-const WorkScheduleTable = ({ employeeListOfParent }) => {
+const WorkScheduleTable = ({ employeeListOfParent, onSetShowAddWorkTable }) => {
   return (
     <div className="LichLamViec_Display_16">
       <div className="LichLamViec_Body_16">
@@ -45,31 +45,66 @@ const WorkScheduleTable = ({ employeeListOfParent }) => {
             </div>
             <div className="LichLamViec_Cell_16">
               <span className="LichLamViec_Shift_16">7:00 - 15:00</span>
-              <button className="LichLamViec_AddShift_16">+ Thêm ca</button>
+              <button
+                className="LichLamViec_AddShift_16"
+                onClick={() => onSetShowAddWorkTable(true)}
+              >
+                + Thêm ca
+              </button>
             </div>
             <div className="LichLamViec_Cell_16">
               <span className="LichLamViec_Shift_16">9:00 - 17:00</span>
-              <button className="LichLamViec_AddShift_16">+ Thêm ca</button>
+              <button
+                className="LichLamViec_AddShift_16"
+                onClick={() => onSetShowAddWorkTable(true)}
+              >
+                + Thêm ca
+              </button>
             </div>
             <div className="LichLamViec_Cell_16">
               <span className="LichLamViec_Shift_16">13:00 - 21:00</span>
-              <button className="LichLamViec_AddShift_16">+ Thêm ca</button>
+              <button
+                className="LichLamViec_AddShift_16"
+                onClick={() => onSetShowAddWorkTable(true)}
+              >
+                + Thêm ca
+              </button>
             </div>
             <div className="LichLamViec_Cell_16">
               <span className="LichLamViec_Shift_16">7:00 - 15:00</span>
-              <button className="LichLamViec_AddShift_16">+ Thêm ca</button>
+              <button
+                className="LichLamViec_AddShift_16"
+                onClick={() => onSetShowAddWorkTable(true)}
+              >
+                + Thêm ca
+              </button>
             </div>
             <div className="LichLamViec_Cell_16">
               <span className="LichLamViec_Shift_16">9:00 - 17:00</span>
-              <button className="LichLamViec_AddShift_16">+ Thêm ca</button>
+              <button
+                className="LichLamViec_AddShift_16"
+                onClick={() => onSetShowAddWorkTable(true)}
+              >
+                + Thêm ca
+              </button>
             </div>
             <div className="LichLamViec_Cell_16">
               <span className="LichLamViec_Shift_16">13:00 - 21:00</span>
-              <button className="LichLamViec_AddShift_16">+ Thêm ca</button>
+              <button
+                className="LichLamViec_AddShift_16"
+                onClick={() => onSetShowAddWorkTable(true)}
+              >
+                + Thêm ca
+              </button>
             </div>
             <div className="LichLamViec_Cell_16">
               <span className="LichLamViec_Shift_16">7:00 - 15:00</span>
-              <button className="LichLamViec_AddShift_16">+ Thêm ca</button>
+              <button
+                className="LichLamViec_AddShift_16"
+                onClick={() => onSetShowAddWorkTable(true)}
+              >
+                + Thêm ca
+              </button>
             </div>
           </div>
         ))}

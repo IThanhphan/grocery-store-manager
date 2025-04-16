@@ -1,64 +1,65 @@
 import { useRef } from "react";
 import { updateProduct } from "../../../../../callAPI/productAPI";
 import { apiName } from "../../../../../config/APIname";
+import { useSelector } from "react-redux";
 
-const ProductModal = ({ product, onSetProducts, onSetChosenProduct}) => {
-  console.log(product);
+const ProductModal = ({ product, onSetProducts, onSetChosenProduct }) => {
+  const userLogin = useSelector((state) => state.user?.currentUser);
   const modalRef = useRef(null);
   const infoProductsModal = [
     {
       name: "Mã hàng:",
       key: "productId",
       value: product.productId,
-      canChange: false
+      canChange: false,
     },
     {
       name: "Loại hàng:",
       key: "categoryName",
       value: product.categoryName,
-      canChange: false
+      canChange: false,
     },
     {
       name: "Thương hiệu:",
       key: "brand",
       value: product.brand,
-      canChange: false
+      canChange: false,
     },
     {
       name: "Ngày hết hạn:",
       key: "expirationDate",
       value: new Date(product.expirationDate).toLocaleDateString("vi-VN"),
-      canChange: false
+      canChange: false,
     },
     {
       name: "Định mức tồn:",
       key: "stock",
       value: product.stock,
-      canChange: false
+      canChange: false,
     },
     {
       name: "Giá bán:",
       key: "sellPrice",
       value: product.sellPrice,
-      canChange: true
+      canChange: true,
     },
     {
       name: "Giá vốn:",
       key: "importPrice",
       value: product.importPrice,
-      canChange: false
+      canChange: false,
     },
     {
       name: "Đơn vị:",
       key: "unit",
       value: product.unit,
-      canChange: false
+      canChange: false,
     },
     {
       name: "Nhà cung cấp:",
       key: "supplierName",
       value: product.supplierName,
-      canChange: false
+      canChange: false,
     },
   ];
   const handleCloseProductInfo = () => {
@@ -67,13 +68,13 @@ const ProductModal = ({ product, onSetProducts, onSetChosenProduct}) => {
 
   const changeProductInfo = (e, item) => {
     onSetChosenProduct((pre) => {
-      return {...pre, [item.key]: e.target.value}
+      return { ...pre, [item.key]: e.target.value };
     });
-  }
+  };
 
   const handleUpdate = () => {
     updateProduct(product._id, {
-      sellPrice: product.sellPrice
+      sellPrice: product.sellPrice,
     });
     onSetProducts((pre) => {
       pre.forEach((item) => {
@@ -82,9 +83,9 @@ const ProductModal = ({ product, onSetProducts, onSetChosenProduct}) => {
         }
       });
       return pre;
-    })
+    });
     onSetChosenProduct(null);
-  }
+  };
 
   return (
     <div className="modal" id="productModal" ref={modalRef}>
@@ -97,24 +98,25 @@ const ProductModal = ({ product, onSetProducts, onSetChosenProduct}) => {
         </div>
         <div className="modal-body">
           <div className="modal-product-info">
-            <div className="modal-product-status">
-              <span className="status-direct-sale">
-                <i className="fas fa-check"></i> Bán trực tiếp
-              </span>
-              <span className="status-no-points">
-                <i className="fas fa-times"></i> Không tích điểm
-              </span>
-            </div>
             <div className="modal-product-details">
               <div className="modal-product-image">
-                <img id="modalProductImage" src={`${apiName}${product.image}`} alt="Hình ảnh sản phẩm" />
+                <img
+                  id="modalProductImage"
+                  src={`${apiName}${product.image}`}
+                  alt="Hình ảnh sản phẩm"
+                />
               </div>
               <div className="modal-product-meta">
                 {infoProductsModal.map((item) => (
                   <p key={item.key}>
                     <strong>{item.name}</strong>
                     <span id="modalProductCode">
-                      <input type="text" value={item.value} onChange={(e) => changeProductInfo(e, item)} disabled={!item.canChange}/>
+                      <input
+                        type="text"
+                        value={item.value}
+                        onChange={(e) => changeProductInfo(e, item)}
+                        disabled={!item.canChange}
+                      />
                     </span>
                   </p>
                 ))}
@@ -122,10 +124,22 @@ const ProductModal = ({ product, onSetProducts, onSetChosenProduct}) => {
             </div>
           </div>
         </div>
-        <div className="modal-footer">
-          <button className="btn btn-green" id="updateBtn" onClick={handleUpdate}>Cập nhật</button>
-          <button className="btn btn-red" id="deleteBtn">Xóa</button>
-        </div>
+        {userLogin.manager ? (
+          <div className="modal-footer">
+            <button
+              className="btn btn-green"
+              id="updateBtn"
+              onClick={handleUpdate}
+            >
+              Cập nhật
+            </button>
+            <button className="btn btn-red" id="deleteBtn">
+              Xóa
+            </button>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

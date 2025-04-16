@@ -9,8 +9,10 @@ import Employee from "./employee/Employee";
 import WorkSchedule from "./workSchedule/WorkSchedule";
 import Timekeeping from "./timekeeping/Timekeeping";
 import { Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Content = () => {
+  const userLogin = useSelector((state) => state.user?.currentUser);
   return (
     <Routes>
       <Route path="/" element={<Overview />} />
@@ -19,10 +21,16 @@ const Content = () => {
       <Route path="/bill" element={<Bill />}></Route>
       <Route path="/productReceipt" element={<ProductReceipt />}></Route>
       <Route path="/customer" element={<Customer />}></Route>
-      <Route path="/supplier" element={<Supplier />}></Route>
-      <Route path="/employee" element={<Employee />}></Route>
-      <Route path="/workSchedule" element={<WorkSchedule />}></Route>
-      <Route path="/timekeeping" element={<Timekeeping />}></Route>
+      {userLogin.manager ? (
+        <>
+          <Route path="/supplier" element={<Supplier />}></Route>
+          <Route path="/employee" element={<Employee />}></Route>
+          <Route path="/workSchedule" element={<WorkSchedule />}></Route>
+          <Route path="/timekeeping" element={<Timekeeping />}></Route>
+        </>
+      ) : (
+        <></>
+      )}
     </Routes>
   );
 };

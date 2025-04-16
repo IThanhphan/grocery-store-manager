@@ -1,4 +1,36 @@
+import { useState } from "react";
+import { addNewUser } from "../../../../../callAPI/authAPI";
+
 const AddEmployeeModal = ({ onSetShowAddEmployeeModal }) => {
+  const [userModal, setUserModal] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    dob: "",
+    address: "",
+    gender: true,
+    citizenId: "",
+    hourlyRate: "",
+    note: ""
+  });
+
+  const handleAddNewUser = async () => {
+    await addNewUser(userModal);
+    onSetShowAddEmployeeModal(false);
+    setUserModal({
+      name: "",
+      email: "",
+      phone: "",
+      password: "",
+      dob: "",
+      address: "",
+      gender: true,
+      citizenId: "",
+      hourlyRate: "",
+      note: ""
+    });
+  }
   return (
     <div className="NhanVien_Overlay_16">
       <div className="NhanVien_ThemNhanVien_16">
@@ -33,45 +65,126 @@ const AddEmployeeModal = ({ onSetShowAddEmployeeModal }) => {
                 />
               </div>
               <div className="ThemNhanVien_input_16">
-                <label>Mã chấm công</label> 
-                <input type="text" />
+                <label>Tên nhân viên</label>
+                <input type="text" value={userModal.name} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      name: e.target.value
+                    }
+                  });
+                }}/>
               </div>
               <div className="ThemNhanVien_input_16">
-                <label>Tên nhân viên</label>
-                <input type="text" />
+                <label>Mật khẩu</label> 
+                <input type="text" value={userModal.password} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      password: e.target.value
+                    }
+                  })
+                }}/>
               </div>
               <div className="ThemNhanVien_input_16">
                 <label>Số điện thoại</label>
-                <input type="text" />
+                <input type="text" value={userModal.phone} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      phone: e.target.value
+                    }
+                  });
+                }}/>
+              </div>
+              <div className="ThemNhanVien_input_16">
+                <label>Email</label> 
+                <input type="text" value={userModal.email} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      email: e.target.value
+                    }
+                  });
+                }}/>
               </div>
               <div className="ThemNhanVien_input_16">
                 <label>Địa chỉ</label>
-                <input type="text" />
+                <input type="text" value={userModal.address} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      address: e.target.value
+                    }
+                  });
+                }}/>
+              </div>
+              <div className="ThemNhanVien_input_16">
+                <label>Ngày sinh</label> 
+                <input type="date" value={userModal.dob} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      dob: e.target.value
+                    }
+                  });
+                }}/>
               </div>
               <div className="ThemNhanVien_input_16">
                 <label>Giới tính</label>
-                <select>
-                  <option>Nam</option>
-                  <option>Nữ</option>
+                <select
+                  value={userModal.gender ? "Nam" : "Nữ"}
+                  onChange={(e) => {
+                    setUserModal((pre) => {
+                      return {
+                        ...pre,
+                        gender: e.target.value === "Nam",
+                      };
+                    });
+                  }}
+                >
+                  <option value="Nam">Nam</option>
+                  <option value="Nữ">Nữ</option>
                 </select>
               </div>
               <div className="ThemNhanVien_input_16">
                 <label>Số CCCD</label>
-                <input type="text" />
+                <input type="text" value={userModal.citizenId} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      citizenId: e.target.value
+                    }
+                  });
+                }}/>
               </div>
               <div className="ThemNhanVien_input_16">
                 <label>Mức lương</label>
-                <input type="text" />
+                <input type="text" value={userModal.hourlyRate} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      hourlyRate: e.target.value
+                    }
+                  });
+                }}/>
               </div>
               <div className="ThemNhanVien_input_16">
                 <label>Ghi chú</label>
-                <input type="text" />
+                <input type="text" value={userModal.note} onChange={(e) => {
+                  setUserModal((pre) => {
+                    return {
+                      ...pre,
+                      note: e.target.value
+                    }
+                  });
+                }}/>
               </div>
             </div>
           </div>
         </div>
         <div className="ThemNhanVien_popup_footer_16">
-          <button className="ThemNhanVien_save_16">Lưu</button>
+          <button className="ThemNhanVien_save_16" onClick={handleAddNewUser}>Lưu</button>
           <button className="ThemNhanVien_cancel_16" onClick={() => onSetShowAddEmployeeModal(false)}>Bỏ qua</button>
         </div>
       </div>

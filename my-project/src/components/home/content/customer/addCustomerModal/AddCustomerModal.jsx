@@ -9,6 +9,18 @@ const AddCustomerModal = ({
   const handleAddCustomer = async () => {
     await addNewCustomer(customerModalFromParent);
     onSetShowAddCustomerModal(false);
+    onSetCustomerModal({
+      name: "",
+      gender: true,
+      customerType: true,
+      identityNumber: "",
+      company: "",
+      dob: "",
+      address: "",
+      phone: "",
+      email: "",
+      note: ""
+    });
   }
   return (
     <div className="KhachHang_Overlay_16">

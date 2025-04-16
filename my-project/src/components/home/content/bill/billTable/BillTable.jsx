@@ -28,22 +28,211 @@ const BillTable = ({ orderListFromParent }) => {
             <td className="column_7"> 0</td>
             <td className="column_8"></td>
           </tr>
-          {orderListFromParent.map((item) => {
-            return (
-              <tr className="data_67" key={item.orderId}>
-                <td className="column_1">
-                  <input type="checkbox" />
-                </td>
-                <td className="column_2">{item.orderId}</td>
-                <td className="column_3">{item.orderDate}</td>
-                <td className="column_4"></td>
-                <td className="column_5">{item.customerName}</td>
-                <td className="column_6">{item.totalAmount}</td>
-                <td className="column_7">0</td>
-                <td className="column_8">{item.totalAmount}</td>
-              </tr>
-            );
-          })}
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
+          <tr className="data_67">
+            <td className="column_1">
+              <input type="checkbox" />
+            </td>
+            <td className="column_2">HD001</td>
+            <td className="column_3">01/02/2025 07:45</td>
+            <td className="column_4"></td>
+            <td className="column_5">Nguyễn Quốc A</td>
+            <td className="column_6">100,000</td>
+            <td className="column_7">0</td>
+            <td className="column_8">100,000</td>
+          </tr>
         </table>
       </div>
     </div>

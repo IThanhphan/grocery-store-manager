@@ -7,7 +7,7 @@ const BillSidebar = () => {
         <input type="date" />
       </div>
       {/* <!-- bảng trạng thái --> */}
-      <div className="filters_67">
+      {/* <div className="filters_67">
         <h3>Trạng thái</h3>
         <div className="choose_option_67">
           <input
@@ -36,7 +36,7 @@ const BillSidebar = () => {
           <input type="checkbox" />
           <p>Đã hủy</p>
         </div>
-      </div>
+      </div> */}
       {/* <!-- Người tạo --> */}
       <div className="filters_67">
         <h3>Người tạo</h3>

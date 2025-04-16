@@ -41,7 +41,7 @@ const CustomerTable = ({
     }
   };
 
-  console.log(listDeleteCustomerFromParent);
+  console.log(listCustomerFromParent);
   return (
     <div className="KhachHang_Table_16">
       <div className="KhachHang_Header_16">

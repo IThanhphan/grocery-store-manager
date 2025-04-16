@@ -10,18 +10,18 @@ import {
 
 const RevenueChart = () => {
   const data = [
-    { name: "01", value: 400000 },
-    { name: "02", value: 180000 },
-    { name: "03", value: 320000 },
-    { name: "04", value: 780000 },
-    { name: "05", value: 100000 },
-    { name: "06", value: 420000 },
-    { name: "07", value: 580000 },
-    { name: "08", value: 200000 },
-    { name: "09", value: 300000 },
-    { name: "10", value: 450000 },
-    { name: "11", value: 430000 },
-    { name: "12", value: 680000 },
+    { name: "Tháng 1", value: 400000 },
+    { name: "Tháng 2", value: 180000 },
+    { name: "Tháng 3", value: 320000 },
+    { name: "Tháng 4", value: 780000 },
+    { name: "Tháng 5", value: 100000 },
+    { name: "Tháng 6", value: 420000 },
+    { name: "Tháng 7", value: 580000 },
+    { name: "Tháng 8", value: 200000 },
+    { name: "Tháng 9", value: 300000 },
+    { name: "Tháng 10", value: 450000 },
+    { name: "Tháng 11", value: 430000 },
+    { name: "Tháng 12", value: 680000 },
   ];
   return (
     <ResponsiveContainer width="100%" height={400}>

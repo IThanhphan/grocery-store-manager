@@ -45,7 +45,7 @@ const MainProductInfo = ({
         />
       </div>
       {/* Giá vốn */}
-      <div>
+      {/* <div>
         <label className="label-08">
           Giá vốn <i className="fas fa-info-circle"></i>
         </label>
@@ -59,9 +59,9 @@ const MainProductInfo = ({
             })
           }
         />
-      </div>
+      </div> */}
       {/* Giá bán */}
-      <div>
+      {/* <div>
         <label className="label-08">
           Giá bán <i className="fas fa-info-circle"></i>
         </label>
@@ -75,7 +75,7 @@ const MainProductInfo = ({
             })
           }
         />
-      </div>
+      </div> */}
       {/* Tên hang */}
       <div>
         <label className="label-08">
@@ -93,7 +93,7 @@ const MainProductInfo = ({
         />
       </div>
       {/* Tồn kho */}
-      <div>
+      {/* <div>
         <label className="label-08">
           Tồn kho <i className="fas fa-info-circle"></i>
         </label>
@@ -107,9 +107,9 @@ const MainProductInfo = ({
             })
           }
         />
-      </div>
+      </div> */}
       {/* Hạn sử dụng */}
-      <div>
+      {/* <div>
         <label className="label-08">
           Hạn sử dụng <i className="fas fa-info-circle"></i>
         </label>
@@ -124,7 +124,7 @@ const MainProductInfo = ({
           }
           min={new Date().toISOString().split("T")[0]}
         />
-      </div>
+      </div> */}
       {/* Loại hàng */}
       <div className="select-group-08">
         <label className="label-08">

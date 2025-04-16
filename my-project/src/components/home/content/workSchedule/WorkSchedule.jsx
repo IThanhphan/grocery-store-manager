@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const WorkSchedule = () => {
   const [employeeList, setEmployeeList] = useState(null);
-  // const [showDetailEmployee, setShowDetailEmployee] = useState(false);
+  const [showAddWorkTable, setShowAddWorkTable] = useState(false);
   useEffect(() => {
     const fetchEmployee = async () => {
       const employeeArr = await getAllEmployee();
@@ -18,20 +18,25 @@ const WorkSchedule = () => {
   console.log(employeeList);
   return (
     <div className="NhanVien_LichLamViec_16">
-      {/* <!--Thêm lịch làm việc--> */}
-      <AddWorkScheduleModal></AddWorkScheduleModal>
+      {showAddWorkTable ? (
+        <AddWorkScheduleModal
+          onSetShowAddWorkTable={setShowAddWorkTable}
+        ></AddWorkScheduleModal>
+      ) : (
+        <></>
+      )}
       <WorkScheduleHeader></WorkScheduleHeader>
       {employeeList ? (
-        <WorkScheduleTable employeeListOfParent={employeeList}></WorkScheduleTable>
+        <WorkScheduleTable
+          employeeListOfParent={employeeList}
+          onSetShowAddWorkTable={setShowAddWorkTable}
+        ></WorkScheduleTable>
       ) : (
         <div className="NhanVien_Empty_16">
           <i className="fa-solid fa-user"></i>
           <p>Lịch làm việc chưa có nhân viên.</p>
         </div>
       )}
-      {/* <!--End--> */}
-
-      {/* <!--Khi chưa có nhân viên --> */}
     </div>
   );
 };

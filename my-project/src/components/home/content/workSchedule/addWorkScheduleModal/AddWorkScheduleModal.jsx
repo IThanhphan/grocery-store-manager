@@ -1,10 +1,10 @@
-const AddWorkScheduleModal = () => {
+const AddWorkScheduleModal = ({ onSetShowAddWorkTable }) => {
   return (
     <div className="NhanVien_LichLamViec_Overlay_16">
       <div className="LichLamViec_ThemCa_16">
         <div className="LichLamViec_ThemCa_Header_16">
           <h6>Thêm ca làm việc</h6>
-          <button className="LichLamViec_ThemCa_Close_16">
+          <button className="LichLamViec_ThemCa_Close_16" onClick={() => onSetShowAddWorkTable(false)}>
             <i className="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -100,7 +100,7 @@ const AddWorkScheduleModal = () => {
           </div>
           <div className="ThemCa_Footer_16">
             <button className="ThemCa_Save_16">Lưu</button>
-            <button className="ThemCa_Cancel_16">Hủy</button>
+            <button className="ThemCa_Cancel_16" onClick={() => onSetShowAddWorkTable(false)}>Hủy</button>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-const TimekeepingTable = ({ employeeListFromParent }) => {
+const TimekeepingTable = ({ employeeListFromParent, onSetShowTimekeepingModal }) => {
   return (
     <div className="ChamCong_Display_16">
       <div className="ChamCong_Body_16">
@@ -42,7 +42,7 @@ const TimekeepingTable = ({ employeeListFromParent }) => {
               </div>
 
               {/* <!-- Đủ ca --> */}
-              <div className="ChamCong_Item_16">
+              <div className="ChamCong_Item_16" onClick={() => onSetShowTimekeepingModal(true)}>
                 <span className="ChamCong_Time_16">7:00-15:00</span>
                 <br />
                 <span className="ChamCong_Status ChamCong_DuCa_16">Đủ ca</span>
@@ -56,7 +56,7 @@ const TimekeepingTable = ({ employeeListFromParent }) => {
               </div>
 
               {/* <!-- Trễ ca --> */}
-              <div className="ChamCong_Item_16">
+              <div className="ChamCong_Item_16" onClick={() => onSetShowTimekeepingModal(true)}>
                 <span className="ChamCong_Time_16">7:00-15:00</span>
                 <br />
                 <span className="ChamCong_Status ChamCong_DuCa_16"></span>
@@ -75,7 +75,7 @@ const TimekeepingTable = ({ employeeListFromParent }) => {
               </div>
 
               {/* <!-- Không có ca --> */}
-              <div className="ChamCong_Item_16">
+              <div className="ChamCong_Item_16" onClick={() => onSetShowTimekeepingModal(true)}>
                 <span className="ChamCong_Time_16"></span>
                 <br />
                 <span className="ChamCong_Status ChamCong_DuCa_16"></span>
@@ -90,7 +90,7 @@ const TimekeepingTable = ({ employeeListFromParent }) => {
                   Không có ca
                 </span>
               </div>
-              <div className="ChamCong_Item_16">
+              <div className="ChamCong_Item_16" onClick={() => onSetShowTimekeepingModal(true)}>
                 <span className="ChamCong_Time_16"></span>
                 <br />
                 <span className="ChamCong_Status ChamCong_DuCa_16"></span>
@@ -105,7 +105,7 @@ const TimekeepingTable = ({ employeeListFromParent }) => {
                   Không có ca
                 </span>
               </div>
-              <div className="ChamCong_Item_16">
+              <div className="ChamCong_Item_16" onClick={() => onSetShowTimekeepingModal(true)}>
                 <span className="ChamCong_Time_16"></span>
                 <br />
                 <span className="ChamCong_Status ChamCong_DuCa_16"></span>
@@ -120,7 +120,7 @@ const TimekeepingTable = ({ employeeListFromParent }) => {
                   Không có ca
                 </span>
               </div>
-              <div className="ChamCong_Item_16">
+              <div className="ChamCong_Item_16" onClick={() => onSetShowTimekeepingModal(true)}>
                 <span className="ChamCong_Time_16"></span>
                 <br />
                 <span className="ChamCong_Status ChamCong_DuCa_16"></span>
@@ -135,7 +135,7 @@ const TimekeepingTable = ({ employeeListFromParent }) => {
                   Không có ca
                 </span>
               </div>
-              <div className="ChamCong_Item_16">
+              <div className="ChamCong_Item_16" onClick={() => onSetShowTimekeepingModal(true)}>
                 <span className="ChamCong_Time_16"></span>
                 <br />
                 <span className="ChamCong_Status ChamCong_DuCa_16"></span>

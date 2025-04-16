@@ -1,4 +1,9 @@
+import { useSelector } from "react-redux";
+import { useState } from "react";
+
 const SearchProductReceipt = () => {
+  const userLogin = useSelector((state) => state.user?.currentUser);
+  const [showDropDown, setShowDropDown] = useState(false);
   return (
     <div className="searchbox-btn_67">
       <div className="search_box_67">
@@ -21,67 +26,78 @@ const SearchProductReceipt = () => {
         </div>
       </div>
       <div className="btn_67">
-        <button className="btn_delete_67" type="submit">
-          Xóa
-        </button>
+        {userLogin.manager ? (
+          <button
+            className="btn_delete_67"
+            type="submit"
+            style={{ backgroundColor: "red" }}
+          >
+            Xóa
+          </button>
+        ) : (
+          <></>
+        )}
+
         <button className="btn_nhaphang_67" type="submit">
-          <a href="./GiaoDich-NhapHang-btnNhapHang.html">
-            <i className="fa-solid fa-plus"></i>
-            <p>Nhập hàng</p>
-          </a>
+          <i className="fa-solid fa-plus"></i>
+          <p>Nhập hàng</p>
         </button>
         <div className="menudown_67">
-          <button type="submit">
+          <button type="submit" onClick={() => setShowDropDown(!showDropDown)}>
             <i className="fa-solid fa-bars"></i>
             <i className="fa-solid fa-caret-down"></i>
           </button>
-          <div className="table_checkbox_67">
-            <div>
-              <input type="checkbox" />
-              <p>Mã nhập hàng</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Mã trả hàng nhập</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Thời gian</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Thời gian tạo</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Ngày cập nhật</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Nhà cung cấp</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Người nhập</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Tổng số lượng</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Tổng số mặt hàng</p>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <p>Tổng tiền hàng</p>
-            </div>
+          {showDropDown ? (
+            <div className="table_checkbox_67">
+              <div>
+                <input type="checkbox" />
+                <p>Mã nhập hàng</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Mã trả hàng nhập</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Thời gian</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Thời gian tạo</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Ngày cập nhật</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Nhà cung cấp</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Người nhập</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Tổng số lượng</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Tổng số mặt hàng</p>
+              </div>
+              <div>
+                <input type="checkbox" />
+                <p>Tổng tiền hàng</p>
+              </div>
 
-            <div>
-              <input type="checkbox" />
-              <p>Trạng thái</p>
+              <div>
+                <input type="checkbox" />
+                <p>Trạng thái</p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

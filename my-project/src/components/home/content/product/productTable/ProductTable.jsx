@@ -34,9 +34,6 @@ const ProductTable = ({
           <span>
             Tồn kho: <strong>184</strong>
           </span>
-          <span>
-            Khách đặt: <strong>0</strong>
-          </span>
         </div>
 
         <table className="table-product">
@@ -51,7 +48,7 @@ const ProductTable = ({
               <th>Giá bán</th>
               <th>Giá vốn</th>
               <th>Tồn kho</th>
-              <th>Khách đặt</th>
+              <th>Ngày hết hạn</th>
               <th>Thời gian tạo</th>
             </tr>
           </thead>
@@ -80,7 +77,7 @@ const ProductTable = ({
                 <td>{product.sellPrice.toLocaleString("vi-VN")}</td>
                 <td>{product.importPrice.toLocaleString("vi-VN")}</td>
                 <td>{product.stock}</td>
-                <td>0</td>
+                <td>{new Date(product.expirationDate).toLocaleDateString("vi-VN")}</td>
                 <td>{new Date(product.createdAt).toLocaleDateString("vi-VN")}</td>
               </tr>
             ))}

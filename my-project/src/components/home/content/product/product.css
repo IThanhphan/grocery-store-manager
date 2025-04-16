@@ -142,6 +142,11 @@ display: block !important;
   margin-bottom: 1rem;
 }
 
+.main-table .card {
+  height: 506px;
+  overflow-y: scroll;
+}
+
 .category-header {
   display: flex;
   justify-content: space-between;

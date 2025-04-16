@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 const Timekeeping = () => {
   const [employeeList, setEmployeeList] = useState(null);
+  const [showTimekeepingModal, setShowTimekeepingModal] = useState(false);
   useEffect(() => {
     const fetchEmployee = async () => {
       const employeeArr = await getAllEmployee();
@@ -19,10 +20,19 @@ const Timekeeping = () => {
     <div className="NhanVien_ChamCong_16">
       <TimekeepingHeader></TimekeepingHeader>
       {/* <!--Thực hiện chấm công--> */}
-      <TimekeepingModal></TimekeepingModal>
+      {showTimekeepingModal ? (
+        <TimekeepingModal
+          onSetShowTimekeepingModal={setShowTimekeepingModal}
+        ></TimekeepingModal>
+      ) : (
+        <></>
+      )}
       {/* <!--End Thực hiện chấm công--> */}
       {employeeList ? (
-        <TimekeepingTable employeeListFromParent={employeeList}></TimekeepingTable>
+        <TimekeepingTable
+          employeeListFromParent={employeeList}
+          onSetShowTimekeepingModal={setShowTimekeepingModal}
+        ></TimekeepingTable>
       ) : (
         <div className="NhanVien_Empty_16">
           <i className="fa-solid fa-user"></i>

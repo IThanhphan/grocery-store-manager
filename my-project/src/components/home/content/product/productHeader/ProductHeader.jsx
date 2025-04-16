@@ -1,13 +1,14 @@
-import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { deleteProduct } from "../../../../../callAPI/productAPI";
+import { useSelector } from "react-redux";
 
-const ProductHeader = ({ listDeleteProducts, onSetProducts }) => {
+const ProductHeader = ({
+  firstStateProductsFromParent,
+  listDeleteProducts,
+  onSetProducts,
+}) => {
+  const userLogin = useSelector((state) => state.user?.currentUser);
   const navigate = useNavigate();
-  const dropDownMenu = useRef(null);
-  const handleDropDownMenu = () => {
-    dropDownMenu.current.classList.toggle("show");
-  };
 
   const handleDeleteProducts = async () => {
     await Promise.all(
@@ -18,6 +19,19 @@ const ProductHeader = ({ listDeleteProducts, onSetProducts }) => {
     );
   };
 
+  const handleSearchProduct = (e) => {
+    onSetProducts(() => {
+      return [...firstStateProductsFromParent];
+    });
+    onSetProducts((pre) => {
+      let temp = pre.filter(
+        (item) =>
+          item.productId.startsWith(e.target.value) ||
+          item.name.startsWith(e.target.value)
+      );
+      return [...temp];
+    });
+  };
   return (
     <div className="content-header">
       <h1>Hàng hóa</h1>
@@ -29,35 +43,25 @@ const ProductHeader = ({ listDeleteProducts, onSetProducts }) => {
               placeholder="Theo mã, tên hàng"
               type="text"
               className="search-input"
+              onChange={handleSearchProduct}
             />
           </div>
-          <button className="dropdown-toggle" onClick={handleDropDownMenu}>
-            <i className="fas fa-chevron-down"></i>
-          </button>
-        </div>
-        <div ref={dropDownMenu} className="dropdown-menu">
-          <input
-            placeholder="Theo mã, tên hàng"
-            type="text"
-            className="dropdown-input"
-          />
-          <input
-            placeholder="Theo ghi chú, mô tả đặt hàng"
-            type="text"
-            className="dropdown-input"
-          />
-          <button className="btn-green search-btn">Tìm kiếm</button>
         </div>
       </div>
       <div className="button-group">
-        <div className="dropdown-container">
-          <button
-            className="btn-delete btn-green"
-            onClick={handleDeleteProducts}
-          >
-            Xóa
-          </button>
-        </div>
+        {userLogin.manager ? (
+          <div className="dropdown-container">
+            <button
+              className="btn-delete btn-green"
+              onClick={handleDeleteProducts}
+            >
+              Xóa
+            </button>
+          </div>
+        ) : (
+          <></>
+        )}
+
         <div className="dropdown-container">
           <button className="btn-green" onClick={() => navigate("/addProduct")}>
             + Thêm hàng hóa

@@ -1,6 +1,8 @@
 import { useNavigate, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const PartnerNav = () => {
+  const userLogin = useSelector((state) => state.user?.currentUser);
   const location = useLocation().pathname;
   const navigate = useNavigate();
   return (
@@ -20,10 +22,14 @@ const PartnerNav = () => {
           <i className="fa-solid fa-user"></i>
           <a href="#">Khách hàng</a>
         </li>
-        <li className="box_menu_67" onClick={() => navigate("/supplier")}>
-          <i className="fa-solid fa-users-viewfinder"></i>
-          <a href="#">Nhà cung cấp</a>
-        </li>
+        {userLogin.manager ? (
+          <li className="box_menu_67" onClick={() => navigate("/supplier")}>
+            <i className="fa-solid fa-users-viewfinder"></i>
+            <a href="#">Nhà cung cấp</a>
+          </li>
+        ) : (
+          <></>
+        )}
       </ul>
     </div>
   );

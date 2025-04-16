@@ -3,15 +3,17 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
   background-color: rgb(232, 234, 237);
-  height: cover;
+  height: 590px;
   gap: 20px;
-  height: 100%;
+  z-index: 100;
 }
 
 .Order_67>h2 {
   margin-top: 25px;
 }
 
+
+/* contain chá»©a khung tÃ¬m kiáº¿m vÃ  cÃ¡c nÃºt chá»©c nÄƒng */
 .searchbox-btn_67 {
   display: flex;
   justify-content: space-between;
@@ -34,18 +36,17 @@
 }
 
 
-.btn-down-table {
-  display: none;
+.dropdown_input_67 {
   background-color: #fff;
   padding: 20px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px 4px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   width: 100%;
   gap: 20px;
-  z-index: 999;
+  z-index: 100;
 }
 
-.btn-down-table input {
+.dropdown_input_67 input {
   display: block;
   padding: 10px 0;
   border: none;
@@ -54,11 +55,11 @@
   outline: none;
 }
 
-.btn-down-table input:focus {
+.dropdown_input_67 input:focus {
   border-bottom: 2px solid rgb(0, 182, 62);
 }
 
-.btn-down-table button {
+.dropdown_input_67 button {
   padding: 10px 0;
   background-color: rgb(0, 182, 62);
   border: none;
@@ -71,7 +72,7 @@
   transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.btn-down-table button:hover {
+.dropdown_input_67 button:hover {
   background-color: rgb(0, 146, 50);
 }
 
@@ -107,7 +108,8 @@
 
 .btn_67>button,
 .menudown_67>button,
-.btn_delete_67 button {
+.btn_delete_67 button,
+.btn_add_67 button {
   display: flex;
   align-items: center;
   padding: 10px 20px;
@@ -128,16 +130,17 @@
   background-color: rgb(101, 2, 2);
 }
 
-.btn_67>button>p {
+.btn_67>button>p,
+.btn_add_67 button {
   font-weight: 700;
 }
 
 .btn_67>button:hover,
-.menudown_67>button:hover {
+.menudown_67>button:hover,
+.btn_add_67 button:hover {
   cursor: pointer;
   background-color: rgb(0, 146, 50);
 }
-
 
 .menudown_67 {
   position: relative;
@@ -145,7 +148,6 @@
 
 /* menu 3 gáº¡ch ngang */
 .table_checkbox_67 {
-  display: none;
   background-color: #fff;
   height: cover;
   width: 200px;
@@ -154,7 +156,7 @@
   padding: 10px 0;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .table_checkbox_67>div {
@@ -215,7 +217,6 @@
 
 .option_67 {
   position: absolute;
-  display: none;
   background-color: #fff;
   width: 90%;
   height: cover;
@@ -223,7 +224,7 @@
   padding: 10px 0;
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
   top: 30%;
-  z-index: 999;
+  z-index: 100;
 }
 
 .option_67 p {
@@ -274,7 +275,6 @@
   background-color: rgb(123, 184, 62);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  display: none;
   transition: all 0.25s ease;
 }
 
@@ -295,7 +295,6 @@
 
 /* báº£ng option phÆ°Æ¡ng thá»©c thanh toÃ¡n */
 .drop_list_67 {
-  display: none;
   background-color: #fff;
   height: cover;
   width: 90%;
@@ -411,4 +410,227 @@
 
 .data_67 td {
   padding: 10px;
+}
+
+.table_add_bill_67 {
+  background-color: #fff;
+  width: 70%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 5px;
+  position: relative;
+  top: 15%;
+  left: 15%;
+  z-index: 1000;
+}
+
+.table_add_bill_67 header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 20px 30px;
+}
+
+.table_add_bill_67 header p {
+  font-weight: bold;
+}
+
+.table_add_bill_67 header i {
+  background-color: #fff;
+  padding: 4px 6px;
+  border-radius: 50%;
+  transition: background 0.2s ease-in, transform 0.2s ease-out;
+}
+
+.body_67 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 40px;
+  padding: 20px 30px;
+}
+
+.box_grid_67 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.box_grid_67 input {
+  border: none;
+  border-bottom: 1px solid #C2C7CE;
+  outline: none;
+}
+
+.dropdown_id_67 input,
+.dropdown_name_67 input,
+.id_items_focus,
+.name_items_focus,
+.payment_focus,
+.id_customer_focus,
+.name_customer_focus {
+  width: 100%;
+}
+
+.title_67 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.items_67 {
+  background-color: #fff;
+  padding: 20px 30px;
+}
+
+.items_info_67 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  background-color: #fff;
+}
+
+.items_info_67 span {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.items_info_67 span input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #C2C7CE;
+}
+
+.footer_67 {
+  text-align: end;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+
+.footer_67 button {
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: #00D26A;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  transition: background 0.2s ease-in, transform 0.2s ease-out;
+}
+
+.footer_67 button:hover,
+.btn_insert_67:hover {
+  background-color: #009232;
+}
+
+.box_grid_67 input:focus,
+.items_info_67 span input:focus {
+  border-bottom: 1px solid #00D26A;
+}
+
+.table_add_bill_67 header i:hover {
+  background-color: #C2C7CE;
+  padding: 4px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.active {
+  display: block;
+}
+
+.btn_insert_delete {
+  margin-top: 20px;
+}
+
+.btn_insert_delete button {
+  padding: 10px 30px;
+}
+
+.btn_delete_67,
+.btn_insert_67 {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn_delete_67 {
+  background-color: red;
+  border: 1px solid red;
+  transition: background 0.3s ease-in, transform 0.2s ease-out;
+  margin-left: 20px;
+}
+
+.btn_delete_67:hover {
+  background-color: rgb(115, 4, 4);
+}
+
+.btn_insert_67 {
+  background-color: #16bc69;
+  border: 1px solid #16bc69;
+  transition: background 0.2s ease-in, transform 0.2s ease-out;
+}
+
+.dropdown_id_67,
+.dropdown_name_67,
+.dropdown_id_items,
+.dropdown_name_items,
+.dropdown_option_payment,
+.dropdown_id_customer_67,
+.dropdown_name_customer_67 {
+  position: relative;
+}
+
+.id_nv_67,
+.name_nv_67,
+.id_items_67,
+.name_items_67,
+.option_payment,
+.id_customer,
+.name_customer {
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  top: 95%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+}
+
+.id_nv_67 p,
+.name_nv_67 p,
+.id_items_67 p,
+.name_items_67 p,
+.option_payment p,
+.id_customer p,
+.name_customer p {
+  padding: 10px 30px;
+  background-color: #fff;
+  transition: background 0.2s ease-in, transform 0.2s ease-out;
+}
+
+.id_nv_67 p:hover,
+.name_nv_67 p:hover,
+.id_items_67 p:hover,
+.name_items_67 p:hover,
+.option_payment p:hover,
+.id_customer p:hover,
+.name_customer p:hover {
+  background-color: #F0F1F3;
 }

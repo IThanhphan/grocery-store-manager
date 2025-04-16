@@ -8,6 +8,7 @@ import { getAllCustomer } from "../../../../callAPI/customerAPI";
 const Customer = () => {
   const [showAddCustomerModal, setShowAddCustomerModal] = useState(false);
   const [listCustomer, setListCustomer] = useState([]);
+  const [firstStateListCustomer, setFirstSateListCusTomer] = useState([]);
   const [customerModal, setCustomerModal] = useState({
     name: "",
     gender: true,
@@ -26,9 +27,10 @@ const Customer = () => {
     const fetchCustomer = async () => {
       const customerArr = await getAllCustomer();
       setListCustomer(customerArr);
+      setFirstSateListCusTomer(customerArr);
     }
     fetchCustomer();
-  }, [showAddCustomerModal]);
+  }, [showAddCustomerModal, listDeleteCustomer]);
   return (
     <section className="KhachHang_16">
       {showAddCustomerModal ? (
@@ -42,6 +44,7 @@ const Customer = () => {
       )}
 
       <CustomerHeader
+        firstStateListCustomerFromParent={firstStateListCustomer}
         listDeleteCustomerFromParent={listDeleteCustomer}
         onSetListCustomer={setListCustomer}
         onSetShowAddCustomerModal={setShowAddCustomerModal}

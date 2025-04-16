@@ -15,7 +15,7 @@ const Header = () => {
           <img src={logo2} alt="name" />
         </div>
         <div className="right_67">
-          <div className="box_67">
+          {/* <div className="box_67">
             <i className="fa-regular fa-envelope"></i>
           </div>
           <div className="box_67">
@@ -38,7 +38,7 @@ const Header = () => {
                 <a href="#">Lịch sử thao tác</a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <BoxAccount onShowAccountBox={setIsShowAccountBox}></BoxAccount>
         </div>
       </div>
